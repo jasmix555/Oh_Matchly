@@ -4,16 +4,33 @@
 
 html {
   font-size: 62.5%;
+  background: index.$base_clr;
+  font-family: "BIZ UDGothic", sans-serif;
 }
 
 @each $size in index.$sizes {
-  .margin-top-#{$size} {
+  .mtop-#{$size} {
     margin-top: $size;
   }
-  .padding-#{$size} {
-    padding: $size;
+  .ptop#{$size} {
+    padding-top: $size;
   }
   .font-#{$size} {
     font-size: $size;
   }
+}
+
+%text-shdw {
+  text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+}
+
+%box-shdw {
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
+%btn {
+  width: 60px;
+  height: 60px;
+  background: index.$sub_clr;
+  border-radius: 10px;
 }
