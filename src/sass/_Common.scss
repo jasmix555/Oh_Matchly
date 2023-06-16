@@ -1,0 +1,19 @@
+@use "Index" as index;
+
+//共通するのコードはここで書く
+
+html {
+  font-size: 62.5%;
+}
+
+@each $size in index.$sizes {
+  .margin-top-#{$size} {
+    margin-top: $size;
+  }
+  .padding-#{$size} {
+    padding: $size;
+  }
+  .font-#{$size} {
+    font-size: $size;
+  }
+}
