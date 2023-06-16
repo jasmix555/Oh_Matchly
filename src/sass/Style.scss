@@ -23,6 +23,20 @@
     color: white;
     text-align: center;
   }
+  .notif-btn {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: index.$main_clr;
+      top: 0;
+      right: -2px;
+      border-radius: 50%;
+    }
+  }
   .prof-btn {
     width: 40px;
     height: 40px;

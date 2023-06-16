@@ -461,6 +461,20 @@ html {
   color: white;
   text-align: center;
 }
+.navbar-wrapper .notif-btn {
+  position: relative;
+}
+.navbar-wrapper .notif-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fabc60;
+  top: 0;
+  right: -2px;
+  border-radius: 50%;
+}
 .navbar-wrapper .prof-btn {
   width: 40px;
   height: 40px;
