@@ -2,6 +2,45 @@
 @use "Index" as index;
 
 //特徴や一人だけで実行するコードはここで書く
+.navbar-wrapper {
+  height: 100px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  a {
+    text-decoration: none;
+    color: index.$grey;
+    font-size: 2.4rem;
+  }
+  .main-text {
+    align-items: center;
+    margin-left: 50px;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+  }
+  .prof-btn {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: -8px;
+    left: 10px;
+    a {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-image: url(https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80);
+      background-size: cover;
+      background-position: right center;
+    }
+  }
+}
+
 .swiper-wrapper {
   width: 355px;
   height: 520px;
@@ -52,7 +91,7 @@
     right: 37%;
     text-align: center;
     a {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       letter-spacing: 0.5px;
       text-decoration: none;
       color: white;
