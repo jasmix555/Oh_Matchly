@@ -1,2 +1,37 @@
 @use "Asset" as asset;
 @use "Index" as index;
+
+.shuffle_box {
+  margin-top: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    position: relative;
+    width: 371px;
+    height: 445px;
+  }
+  // .rolling {
+  //   width: 300px;
+  //   height: 300px;
+  //   position: absolute;
+  // }
+}
+.btn {
+  margin: 60px 0 0 126px;
+  width: 140px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: index.$main_clr;
+  transition: 0.3s ease;
+  // &:hover + .imgBox {
+  //   // background-color: aqua;
+  //   background-image: url("../img/miki/shuffle_box_move.png");
+  //   background-position: top left;
+  // }
+
+  p {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
