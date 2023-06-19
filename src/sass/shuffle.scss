@@ -1,4 +1,2 @@
-* {
-  background: #333;
-  color: #f4f4f4;
-}
+@use "Asset" as asset;
+@use "Index" as index;
