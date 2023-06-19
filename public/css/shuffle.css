@@ -324,7 +324,9 @@ video {
 html {
   font-size: 62.5%;
   background: #242f30;
-  font-family: "BIZ UDGothic", sans-serif;
+  font-family: "a-otf-ud-shin-go-pr6n", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .mtop-1rem {

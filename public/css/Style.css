@@ -324,7 +324,9 @@ video {
 html {
   font-size: 62.5%;
   background: #242f30;
-  font-family: "BIZ UDGothic", sans-serif;
+  font-family: "a-otf-ud-shin-go-pr6n", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .mtop-1rem {
@@ -435,7 +437,7 @@ html {
   font-size: 10rem;
 }
 
-.swipe-btn-wrapper .dislike-btn, .swipe-btn-wrapper .save-btn {
+.swipe-btn-wrapper .no-btn, .swipe-btn-wrapper .yes-btn {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
@@ -443,7 +445,7 @@ html {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
-.swipe-btn-wrapper .dislike-btn, .swipe-btn-wrapper .save-btn {
+.swipe-btn-wrapper .no-btn, .swipe-btn-wrapper .yes-btn {
   width: 60px;
   height: 60px;
   background: #2f6457;
@@ -469,7 +471,7 @@ html {
   align-items: center;
   margin-left: 50px;
   font-size: 1.2rem;
-  color: white;
+  color: #f5f5f7;
   text-align: center;
 }
 .navbar-wrapper .notif-btn {
@@ -503,17 +505,126 @@ html {
   background-position: right center;
 }
 
+.filter-wrapper {
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+  z-index: 100;
+}
+.filter-wrapper .filter {
+  position: relative;
+  height: 25px;
+  border-radius: 1rem;
+  background: #2f6457;
+  display: flex;
+}
+.filter-wrapper .filter .filter-text {
+  color: #f5f5f7;
+  line-height: 2rem;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.filter-wrapper .filter .filter-arrow {
+  position: absolute;
+  right: 1rem;
+  height: 20px;
+  width: 20px;
+}
+.filter-wrapper .filter .filter-arrow button {
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+  color: #fabc60;
+}
+
+.filter-dropdown-wrapper {
+  position: absolute;
+  width: 350px;
+  top: 11rem;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  display: none;
+  height: 460px;
+  z-index: 10;
+  background: #2f6457;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-top: 2rem;
+}
+.filter-dropdown-wrapper .filter-dropdown {
+  height: 380px;
+  overflow-y: scroll;
+  padding: 0 30px;
+}
+.filter-dropdown-wrapper .filter-dropdown::-webkit-scrollbar {
+  display: none;
+}
+.filter-dropdown-wrapper .filter-dropdown .filter-genre {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #878787;
+}
+.filter-dropdown-wrapper .filter-dropdown h2 {
+  color: #fabc60;
+  padding-top: 1rem;
+}
+.filter-dropdown-wrapper .filter-dropdown ul {
+  margin-top: 5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.filter-dropdown-wrapper .filter-dropdown ul li {
+  border-radius: 1rem;
+  background: #28564b;
+  font-size: 1.4rem;
+  padding: 2px 15px;
+}
+.filter-dropdown-wrapper .filter-dropdown ul li a {
+  width: inherit;
+  height: inherit;
+  display: block;
+  color: #f5f5f7;
+  text-decoration: none;
+}
+.filter-dropdown-wrapper .filter-dropdown-btn {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+.filter-dropdown-wrapper .filter-dropdown-btn button {
+  margin: 0 auto;
+  background: #fabc60;
+  width: 125px;
+  height: 35px;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+}
+
+.showMenu {
+  transform: translateY(0%);
+}
+
 .swiper {
   position: relative;
+  padding-top: 20px;
   width: 100%;
-  height: 100%;
-  padding: 20px;
 }
 .swiper .swiper-wrapper {
+  position: absolute;
+  display: none;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   width: 355px;
   height: 520px;
-  position: relative;
   border-radius: 10px;
+  transform-origin: 50% 99%;
+}
+.swiper .swiper-wrapper.current {
+  display: block;
 }
 .swiper .swiper-wrapper .swiper-image {
   position: absolute;
@@ -535,7 +646,7 @@ html {
   top: 10px;
 }
 .swiper .swiper-wrapper .swiper-text {
-  color: white;
+  color: #f5f5f7;
   font-weight: 400;
   line-height: 20px;
   text-align: center;
@@ -564,7 +675,7 @@ html {
   font-size: 1.6rem;
   letter-spacing: 0.5px;
   text-decoration: none;
-  color: white;
+  color: #f5f5f7;
   display: block;
 }
 .swiper .swiper-wrapper .swiper-info a::before {
@@ -573,7 +684,33 @@ html {
   font-weight: 400;
   margin-right: 5px;
 }
+.swiper .yes.swiper-wrapper {
+  animation: yes 0.7s ease-out;
+}
+.swiper .nope.swiper-wrapper {
+  animation: nope 0.7s ease-out;
+}
 
+@keyframes yes {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
 .swipe-btn-wrapper {
   width: 100%;
   position: absolute;
@@ -597,24 +734,23 @@ html {
   border-radius: 10px;
 }
 .swipe-btn-wrapper .choose-here-btn button {
-  color: white;
+  color: #f5f5f7;
   text-decoration: none;
   font-size: 2.2rem;
   text-align: center;
   display: block;
   width: 100%;
   height: 100%;
-  padding: 17px 0px;
 }
-.swipe-btn-wrapper .dislike-btn {
+.swipe-btn-wrapper .no-btn {
   font-size: 5rem;
 }
-.swipe-btn-wrapper .dislike-btn button {
+.swipe-btn-wrapper .no-btn button {
   padding: 4px 0px;
 }
-.swipe-btn-wrapper .save-btn {
+.swipe-btn-wrapper .yes-btn {
   font-size: 3.8rem;
 }
-.swipe-btn-wrapper .save-btn button {
+.swipe-btn-wrapper .yes-btn button {
   padding: 10px 0px;
 }
