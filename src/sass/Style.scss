@@ -55,6 +55,9 @@
   }
 }
 
+.filter {
+}
+
 .swiper {
   position: relative;
   width: 100%;
@@ -134,7 +137,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;
-  a {
+  button {
     text-decoration: none;
     color: index.$main_clr;
     display: block;
@@ -147,7 +150,7 @@
     height: 60px;
     background: index.$main_clr;
     border-radius: 10px;
-    a {
+    button {
       color: white;
       text-decoration: none;
       font-size: 2.2rem;
@@ -162,7 +165,7 @@
     @extend %btn;
     @extend %text-shdw;
     font-size: 5rem;
-    a {
+    button {
       padding: 4px 0px;
     }
   }
@@ -170,7 +173,7 @@
     @extend %btn;
     @extend %text-shdw;
     font-size: 3.8rem;
-    a {
+    button {
       padding: 10px 0px;
     }
   }

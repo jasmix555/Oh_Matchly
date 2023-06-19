@@ -582,7 +582,7 @@ html {
   justify-content: space-between;
   padding: 0px 30px;
 }
-.swipe-btn-wrapper a {
+.swipe-btn-wrapper button {
   text-decoration: none;
   color: #fabc60;
   display: block;
@@ -596,7 +596,7 @@ html {
   background: #fabc60;
   border-radius: 10px;
 }
-.swipe-btn-wrapper .choose-here-btn a {
+.swipe-btn-wrapper .choose-here-btn button {
   color: white;
   text-decoration: none;
   font-size: 2.2rem;
@@ -609,12 +609,12 @@ html {
 .swipe-btn-wrapper .dislike-btn {
   font-size: 5rem;
 }
-.swipe-btn-wrapper .dislike-btn a {
+.swipe-btn-wrapper .dislike-btn button {
   padding: 4px 0px;
 }
 .swipe-btn-wrapper .save-btn {
   font-size: 3.8rem;
 }
-.swipe-btn-wrapper .save-btn a {
+.swipe-btn-wrapper .save-btn button {
   padding: 10px 0px;
 }
