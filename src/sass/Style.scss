@@ -55,7 +55,23 @@
   }
 }
 
-.filter {
+.filter-wrapper {
+  position: relative;
+  width: 350px;
+  height: 25px;
+  border: solid 1px tomato;
+  color: index.$white;
+  display: flex;
+  justify-content: center;
+  .filter-arrow {
+    width: 20px;
+    height: 20px;
+    border: solid 1px skyblue;
+    button {
+      font-size: 2rem;
+      color: red;
+    }
+  }
 }
 
 .swiper {

@@ -503,6 +503,25 @@ html {
   background-position: right center;
 }
 
+.filter-wrapper {
+  position: relative;
+  width: 350px;
+  height: 25px;
+  border: solid 1px tomato;
+  color: #f5f5f7;
+  display: flex;
+  justify-content: center;
+}
+.filter-wrapper .filter-arrow {
+  width: 20px;
+  height: 20px;
+  border: solid 1px skyblue;
+}
+.filter-wrapper .filter-arrow button {
+  font-size: 2rem;
+  color: red;
+}
+
 .swiper {
   position: relative;
   width: 100%;
