@@ -441,7 +441,7 @@ html {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.swiper .swiper-wrapper {
+.swiper ul .card {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -513,7 +513,7 @@ html {
 }
 .filter-wrapper .filter {
   position: relative;
-  height: 25px;
+  height: 30px;
   border-radius: 1rem;
   background: #2f6457;
   display: flex;
@@ -603,6 +603,7 @@ html {
 .filter-dropdown-wrapper .filter-dropdown-btn button {
   margin: 0 auto;
   background: #fabc60;
+  color: #2f6457;
   width: 125px;
   height: 35px;
   font-size: 1.8rem;
@@ -618,37 +619,30 @@ html {
   padding-top: 20px;
   width: 100%;
 }
-.swiper.yes.swiper-wrapper {
-  animation: yay 0.7s ease-out;
-}
-.swiper.nope.swiper-wrapper {
-  animation: nope 0.7s ease-out;
-}
-.swiper .swiper-wrapper {
+.swiper ul .card {
   position: absolute;
   display: none;
+  z-index: 0;
   right: 0;
   left: 0;
   margin: 0 auto;
   width: 355px;
   height: 520px;
   border-radius: 10px;
-  transform-origin: 50% 99%;
 }
-.swiper .swiper-wrapper.current {
+.swiper ul .card.current {
   display: block;
 }
-.swiper .swiper-wrapper .swiper-image {
+.swiper ul .card .swiper-image {
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-image: url(https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80);
   background-size: cover;
   background-position: right center;
 }
-.swiper .swiper-wrapper .beer-icon {
+.swiper ul .card .beer-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -657,7 +651,7 @@ html {
   right: 10px;
   top: 10px;
 }
-.swiper .swiper-wrapper .swiper-text {
+.swiper ul .card .swiper-text {
   color: #f5f5f7;
   font-weight: 400;
   line-height: 20px;
@@ -670,53 +664,51 @@ html {
   background: hsla(0, 0%, 100%, 0.1);
   border-radius: 5px;
 }
-.swiper .swiper-wrapper .swiper-text .swiper-name {
+.swiper ul .card .swiper-text .swiper-name {
   font-size: 1.2rem;
 }
-.swiper .swiper-wrapper .swiper-text .swiper-time {
+.swiper ul .card .swiper-text .swiper-time {
   margin-top: 10px;
   font-size: 1.6rem;
 }
-.swiper .swiper-wrapper .swiper-info {
+.swiper ul .card .swiper-info {
   position: absolute;
   bottom: 25px;
   right: 37%;
   text-align: center;
 }
-.swiper .swiper-wrapper .swiper-info a {
+.swiper ul .card .swiper-info a {
   font-size: 1.6rem;
   letter-spacing: 0.5px;
   text-decoration: none;
   color: #f5f5f7;
   display: block;
 }
-.swiper .swiper-wrapper .swiper-info a::before {
+.swiper ul .card .swiper-info a::before {
   content: "\f059";
   font-family: "Font Awesome 6 Free";
   font-weight: 400;
   margin-right: 5px;
 }
 
-@keyframes yay {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(40deg) translateY(-80px);
-    opacity: 0;
-  }
+.rotate-left {
+  transform: rotate(30deg) scale(0.8);
+  transition: 1s;
+  margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+  z-index: 10;
 }
-@keyframes nope {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(-40deg) translateY(-80px);
-    opacity: 0;
-  }
+
+.rotate-right {
+  transform: rotate(-30deg) scale(0.8);
+  transition: 1s;
+  opacity: 0;
+  margin-left: -400px;
+  cursor: w-resize;
+  z-index: 10;
 }
+
 .swipe-btn-wrapper {
   width: 100%;
   position: fixed;

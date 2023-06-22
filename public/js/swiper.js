@@ -1,66 +1,34 @@
-function animatecard(ev) {
-  var t = ev.target;
-  if (t.className === "but-nope") {
-    t.parentNode.classList.add("nope");
-  }
-  if (t.className === "but-yay") {
-    t.parentNode.classList.add("yes");
-  }
-}
-document.body.addEventListener("click", animatecard);
-function animationdone(ev) {
-  // get the container
-  var origin = ev.target.parentNode;
+document.addEventListener("DOMContentLoaded", function () {
+  var nopeButton = document.querySelector(".but-nope");
+  var yaybutton = document.querySelector(".but-yay");
 
-  // remove the appropriate class
-  // depending on the animation name
-  if (ev.animationName === "yay") {
-    origin.classList.remove("yes");
-  }
-  if (ev.animationName === "nope") {
-    origin.classList.remove("nope");
-  }
+  nopeButton.addEventListener("click", function () {
+    var currentCard = document.querySelector(".current");
+    var nextCard = currentCard.nextElementSibling;
 
-  // if any of the card events have
-  // ended…
-  if (ev.animationName === "nope" || ev.animationName === "yay") {
-    // remove the first card in the element
-    origin.querySelector(".current").remove();
-
-    // if there are no cards left, do nothing
-    if (!origin.querySelector(".swiper-wrapper")) {
-      // no more cards left -
-      // TODO other functionality
+    if (nextCard !== null) {
+      currentCard.classList.remove("current");
+      currentCard.classList.add("rotate-right");
+      nextCard.classList.add("current");
     } else {
-      // otherwise shift the 'current' class to
-      // the next card
-      origin.querySelector(".swiper-wrapper").classList.add("current");
+      currentCard.classList.remove("current");
+      currentCard.classList.add("rotate-right");
+      document.querySelector(".card:first-child").classList.add("current");
     }
-  }
-}
-document.body.addEventListener("animationend", animationdone);
-function fireCustomEvent(name, payload) {
-  var newevent = new CustomEvent(name, {
-    detail: payload,
   });
-  document.body.dispatchEvent(newevent);
-}
-function animatecard(ev) {
-  var t = ev.target;
-  if (t.className === "but-nope") {
-    t.parentNode.classList.add("nope");
-    fireCustomEvent("nopecard", {
-      origin: t,
-      container: t.parentNode,
-      card: t.parentNode.querySelector(".card"),
-    });
-  }
-  if (t.className === "but-yay") {
-    t.parentNode.classList.add("yes");
-    fireCustomEvent("yepcard", {
-      origin: t,
-      container: t.parentNode,
-      card: t.parentNode.querySelector(".card"),
-    });
-  }
-}
+
+  yaybutton.addEventListener("click", function () {
+    var currentCard = document.querySelector(".current");
+    var nextCard = currentCard.nextElementSibling;
+
+    if (nextCard !== null) {
+      currentCard.classList.remove("current");
+      currentCard.classList.add("rotate-left");
+      nextCard.classList.add("current");
+    } else {
+      currentCard.classList.remove("current");
+      currentCard.classList.add("rotate-left");
+      document.querySelector(".card:first-child").classList.add("current");
+    }
+  });
+});
