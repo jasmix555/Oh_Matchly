@@ -1,6 +1,5 @@
 const filter_btn = document.querySelector(".filter-btn");
 const dropdown = document.querySelector(".filter-dropdown-wrapper");
-console.log(filter_btn);
 
 filter_btn.addEventListener("click", (e) => {
   if (dropdown.style.display == "none") {
@@ -9,3 +8,16 @@ filter_btn.addEventListener("click", (e) => {
     dropdown.style.display = "none";
   }
 });
+
+const filterSelect = document.querySelectorAll(".filter-genre li a");
+console.log(filterSelect);
+
+for (let i = 0; i < filterSelect.length; i++) {
+  filterSelect[i].addEventListener("click", (e) => {
+    if (e.target.classList.contains("selected")) {
+      e.target.classList.remove("selected");
+    } else {
+      e.target.classList.add("selected");
+    }
+  });
+}
