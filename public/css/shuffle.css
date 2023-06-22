@@ -437,27 +437,289 @@ html {
   font-size: 10rem;
 }
 
+body {
+  position: relative;
+}
+
 .shuffle_box {
-  margin-top: 108px;
+  height: 542px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.shuffle_box img {
   position: relative;
+}
+.shuffle_box .machine {
+  position: absolute;
+  left: 10px;
+  top: 108px;
+  right: 0;
+  bottom: 0;
   width: 371px;
   height: 445px;
 }
+.shuffle_box .move {
+  position: absolute;
+  left: 15px;
+  width: 360px;
+  height: 322px;
+  display: none;
+}
+.shuffle_box .move.active {
+  display: block;
+  animation: Move 0.25s 5;
+}
+.shuffle_box .move.active + .machine {
+  animation: Move 0.25s 5;
+}
+.shuffle_box .move02 {
+  position: absolute;
+  width: 320px;
+  height: 323px;
+  display: none;
+}
+.shuffle_box .move02.active {
+  display: block;
+  animation: Move 0.25s 5;
+}
+.shuffle_box .move02.active + .machine {
+  animation: Move 0.25s 5;
+}
 
 .btn {
-  margin: 60px 0 0 126px;
+  margin: 60px 0 0 124px;
   width: 140px;
   height: 50px;
   border-radius: 10px;
   background-color: #fabc60;
-  transition: 0.3s ease;
 }
 .btn p {
   color: #fff;
   font-size: 2rem;
+}
+
+.bgWrap {
+  position: relative;
+  width: 100%;
+  height: 2px;
+}
+.bgWrap .modal {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  width: 390px;
+  height: 1200px;
+  overflow: hidden;
+  top: -900px;
+  z-index: 1000;
+  display: none;
+  animation: opa 2s ease;
+}
+.bgWrap .modal.active {
+  display: block;
+}
+.bgWrap .random {
+  z-index: 1000000;
+  display: none;
+  position: absolute;
+  top: -560px;
+  left: 30px;
+  width: 332px;
+  height: 764px;
+  background-image: url("../img/miki/shuffle_random_01.png");
+  background-size: contain;
+}
+.bgWrap .random .randomHead {
+  width: 332px;
+  height: 53px;
+  display: flex;
+  justify-content: first baseline;
+}
+.bgWrap .random .randomHead .fa-solid.fa-xmark {
+  color: #fff;
+  margin: 0 42px 0 26px;
+}
+.bgWrap .random .randomHead h2 {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 50px;
+}
+.bgWrap .random .innerWrap {
+  height: 540px;
+  width: 332px;
+  padding: 10px 25px 0 25px;
+}
+.bgWrap .random .innerWrap .picture {
+  width: 280px;
+  height: 180px;
+  margin-bottom: 5px;
+}
+.bgWrap .random .innerWrap .picture img {
+  width: 280px;
+  height: 80px;
+}
+.bgWrap .random .innerWrap .iframe {
+  border-radius: 10px;
+}
+.bgWrap .random .innerWrap .mapMore {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  width: 100%;
+}
+.bgWrap .random .innerWrap .mapMore a {
+  text-decoration: none;
+  color: #0087d3;
+}
+.bgWrap .random .innerWrap .shop {
+  margin-top: 5px;
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ebebeb;
+}
+.bgWrap .random .innerWrap .shop h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.bgWrap .random .innerWrap .shop .tagWrap {
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+}
+.bgWrap .random .innerWrap .shop .tagWrap li {
+  width: fit-content;
+  padding: 2px 10px;
+  height: 24px;
+  border-radius: 10px;
+  list-style: none;
+  background: #fabc60;
+  font-size: 1.2rem;
+}
+.bgWrap .random .innerWrap .book {
+  display: block;
+  margin: 7px auto;
+  width: 130px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #fabc60;
+  box-shadow: 2px 2px 3px #898787;
+}
+.bgWrap .random .innerWrap .book a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.bgWrap .random .innerWrap .aside {
+  display: block;
+  font-size: 1rem;
+  color: #878787;
+}
+.bgWrap .random.active {
+  display: block;
+}
+
+.capsuleWrap {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+.capsuleWrap .capsule3 {
+  width: 154px;
+  height: 126px;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  z-index: 10000;
+  display: none;
+}
+.capsuleWrap .capsule3 img {
+  position: absolute;
+}
+.capsuleWrap .capsule3 img:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  left: -60px;
+}
+.capsuleWrap .capsule3 img:nth-child(2) {
+  width: 94px;
+  height: 94px;
+  top: 10px;
+  left: 45px;
+}
+.capsuleWrap .capsule3 img:nth-child(3) {
+  width: 74px;
+  height: 74px;
+  top: 20px;
+  left: 155px;
+}
+.capsuleWrap .capsule3.active {
+  display: block;
+  animation: SlideIn 2s ease-out forwards;
+}
+.capsuleWrap .ball {
+  position: absolute;
+  width: 324px;
+  height: 72px;
+  z-index: 10001;
+  top: -60px;
+  left: 37px;
+  display: none;
+  animation: fuwa 2s infinite, opa2 0.5s;
+}
+.capsuleWrap .ball.active {
+  display: block;
+}
+
+@keyframes Move {
+  0% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+  25% {
+    transform: translate(4px, 4px) rotateZ(1deg);
+  }
+  50% {
+    transform: translate(0px, 4px) rotateZ(-1deg);
+  }
+  75% {
+    transform: translate(4px, 0px) rotateZ(1deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+}
+@keyframes SlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0, 0);
+  }
+}
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes opa2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fuwa {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
