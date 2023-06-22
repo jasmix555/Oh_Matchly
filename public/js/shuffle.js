@@ -34,14 +34,14 @@ btn.addEventListener("click", (e) => {
   purple.addEventListener("click", () => {
     // random.classList.toggle("active");
     toggle(random, "active");
-    ball.remove();
-    capsule.remove();
+    ball.classList.toggle("active");
+    capsule.classList.toggle("active");
   });
-  close.addEventListener("click", () => {
-    toggle(random, "active");
-    ball.add();
-    capsule.add();
-  });
+});
+close.addEventListener("click", () => {
+  toggle(random, "active");
+  ball.classList.toggle("active");
+  capsule.classList.toggle("active");
 });
 
 function toggle(elem, className) {
