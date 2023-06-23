@@ -628,9 +628,11 @@ html {
   width: 355px;
   height: 520px;
   border-radius: 10px;
+  transform-origin: 50% 99%;
 }
 .swiper ul .card.current {
   display: block;
+  transform-origin: 50% 99%;
 }
 .swiper ul .card .swiper-image {
   position: absolute;
@@ -691,21 +693,11 @@ html {
 }
 
 .rotate-left {
-  transform: rotate(30deg) scale(0.8);
-  transition: 1s;
-  margin-left: 400px;
-  cursor: e-resize;
-  opacity: 0;
-  z-index: 10;
+  animation: nope 0.7s ease-out;
 }
 
 .rotate-right {
-  transform: rotate(-30deg) scale(0.8);
-  transition: 1s;
-  opacity: 0;
-  margin-left: -400px;
-  cursor: w-resize;
-  z-index: 10;
+  animation: yay 0.7s ease-out;
 }
 
 .swipe-btn-wrapper {
@@ -751,4 +743,32 @@ html {
 }
 .swipe-btn-wrapper .but-yay button {
   padding: 10px 0px;
+}
+.swipe-btn-wrapper .counter-wrapper {
+  position: absolute;
+  font-size: 1.6rem;
+  color: #f5f5f7;
+  right: 4rem;
+  top: -3rem;
+}
+
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
 }

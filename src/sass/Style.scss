@@ -173,6 +173,7 @@
     .card {
       &.current {
         display: block;
+        transform-origin: 50% 99%;
       }
       position: absolute;
       display: none;
@@ -183,6 +184,7 @@
       width: 355px;
       height: 520px;
       border-radius: 10px;
+      transform-origin: 50% 99%;
       @extend %box-shdw;
       .swiper-image {
         position: absolute;
@@ -246,21 +248,11 @@
 }
 
 .rotate-left {
-  transform: rotate(30deg) scale(0.8);
-  transition: 1s;
-  margin-left: 400px;
-  cursor: e-resize;
-  opacity: 0;
-  z-index: 10;
+  animation: nope 0.7s ease-out;
 }
 
 .rotate-right {
-  transform: rotate(-30deg) scale(0.8);
-  transition: 1s;
-  opacity: 0;
-  margin-left: -400px;
-  cursor: w-resize;
-  z-index: 10;
+  animation: yay 0.7s ease-out;
 }
 
 .swipe-btn-wrapper {
@@ -309,5 +301,34 @@
     button {
       padding: 10px 0px;
     }
+  }
+  .counter-wrapper {
+    position: absolute;
+    font-size: 1.6rem;
+    color: index.$white;
+    right: 4rem;
+    top: -3rem;
+  }
+}
+
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
   }
 }
