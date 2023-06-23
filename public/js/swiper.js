@@ -75,3 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add a click event listener to the "but-yay" button
   yayButton.addEventListener("click", increaseCounter);
 }
+
+{
+  //modal function
+}

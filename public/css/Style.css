@@ -440,7 +440,7 @@ html {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.swiper ul .card {
+.filter-dropdown-wrapper .filter-dropdown-btn button, .swiper ul .card {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -512,14 +512,13 @@ html {
 }
 .filter-wrapper .filter {
   position: relative;
-  height: 30px;
+  height: 3.4rem;
   border-radius: 1rem;
   background: #2f6457;
   display: flex;
 }
 .filter-wrapper .filter .filter-text {
   color: #f5f5f7;
-  line-height: 2rem;
   text-align: center;
   align-self: center;
   width: 100%;
@@ -532,8 +531,8 @@ html {
   width: 20px;
 }
 .filter-wrapper .filter .filter-arrow button {
-  line-height: 2.5rem;
-  font-size: 1.8rem;
+  line-height: 3.4rem;
+  font-size: 2rem;
   color: #fabc60;
 }
 
@@ -748,7 +747,7 @@ html {
   position: absolute;
   font-size: 1.6rem;
   color: #f5f5f7;
-  right: 4rem;
+  right: 4.2rem;
   top: -3rem;
 }
 

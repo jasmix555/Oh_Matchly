@@ -63,13 +63,12 @@
   .filter {
     position: relative;
     // width: 350px;
-    height: 30px;
+    height: 3.4rem;
     border-radius: 1rem;
     background: index.$sub_clr;
     display: flex;
     .filter-text {
       color: index.$white;
-      line-height: 2rem;
       text-align: center;
       align-self: center;
       width: 100%;
@@ -81,8 +80,8 @@
       height: 20px;
       width: 20px;
       button {
-        line-height: 2.5rem;
-        font-size: 1.8rem;
+        line-height: 3.4rem;
+        font-size: 2rem;
         color: index.$main_clr;
       }
     }
@@ -150,6 +149,7 @@
     display: flex;
     margin-top: 1rem;
     button {
+      @extend %box-shdw;
       margin: 0 auto;
       background: index.$main_clr;
       color: index.$sub_clr;
@@ -306,7 +306,7 @@
     position: absolute;
     font-size: 1.6rem;
     color: index.$white;
-    right: 4rem;
+    right: 4.2rem;
     top: -3rem;
   }
 }

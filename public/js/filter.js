@@ -20,3 +20,13 @@ for (let i = 0; i < filterSelect.length; i++) {
     }
   });
 }
+
+const shiboru = document.querySelector(".filter-dropdown-btn");
+
+shiboru.addEventListener("click", (e) => {
+  if (dropdown.style.display == "none") {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+});
