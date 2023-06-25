@@ -440,8 +440,27 @@ html {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.welcome-wrapper .login-btn-wrapper .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
+.welcome-wrapper .login-btn-wrapper .login, .welcome-wrapper .login-btn-wrapper .register, .filter-dropdown-wrapper .filter-dropdown-btn button {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-wrapper .login-btn-wrapper .login, .welcome-wrapper .login-btn-wrapper .register {
+  width: 20.5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background: #fabc60;
+  text-align: center;
+}
+.welcome-wrapper .login-btn-wrapper .login a, .welcome-wrapper .login-btn-wrapper .register a {
+  color: #2f6457;
+  height: inherit;
+  width: inherit;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4.6rem;
+  display: block;
 }
 
 .swipe-btn-wrapper #nope, .swipe-btn-wrapper #love {
@@ -464,16 +483,17 @@ html {
   width: 100vw;
   position: absolute;
   pointer-events: none;
+  z-index: -1;
 }
 .welcome-wrapper .logo {
-  padding-top: 40rem;
+  padding-top: 38rem;
   background-image: url(../../public/img/ワイヤー/Sakamachi.svg);
   background-size: contain;
-  background-position: bottom;
-  width: 28rem;
-  height: 16rem;
+  background-position: center bottom;
+  width: 24rem;
+  height: 15.8859rem;
   position: relative;
-  right: 0;
+  left: 1rem;
   margin: 0 auto;
 }
 .welcome-wrapper .welcome-text {
@@ -491,24 +511,11 @@ html {
   align-items: center;
   gap: 2rem;
 }
-.welcome-wrapper .login-btn-wrapper .login {
-  width: 20.5rem;
-  height: 5rem;
-  border-radius: 1rem;
-  background: #fabc60;
-  color: #2f6457;
-  text-align: center;
+.welcome-wrapper .login-btn-wrapper .register {
+  background: #2f6457;
 }
-.welcome-wrapper .login-btn-wrapper .login a {
-  height: inherit;
-  width: inherit;
-  text-decoration: none;
-  color: #39695e;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 4.4rem;
-  display: block;
+.welcome-wrapper .login-btn-wrapper .register a {
+  color: #f5f5f7;
 }
 
 .navbar-wrapper {

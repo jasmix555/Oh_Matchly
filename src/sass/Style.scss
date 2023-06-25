@@ -14,16 +14,17 @@
     width: 100vw;
     position: absolute;
     pointer-events: none;
+    z-index: -1;
   }
   .logo {
-    padding-top: 40rem;
+    padding-top: 38rem;
     background-image: url(../../public/img/ワイヤー/Sakamachi.svg);
     background-size: contain;
-    background-position: bottom;
-    width: 28rem;
-    height: 16rem;
+    background-position: center bottom;
+    width: 24rem;
+    height: 15.8859rem;
     position: relative;
-    right: 0;
+    left: 1rem;
     margin: 0 auto;
   }
   .welcome-text {
@@ -42,22 +43,14 @@
     gap: 2rem;
     .login {
       @extend %box-shdw;
-      width: 20.5rem;
-      height: 5rem;
-      border-radius: 1rem;
-      background: index.$main_clr;
-      color: index.$sub_clr;
-      text-align: center;
+      @extend %big-btn;
+    }
+    .register {
+      @extend %box-shdw;
+      @extend %big-btn;
+      background: index.$sub_clr;
       a {
-        height: inherit;
-        width: inherit;
-        text-decoration: none;
-        color: #39695e;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 4.4rem;
-        display: block;
+        color: index.$white;
       }
     }
   }
