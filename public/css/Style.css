@@ -436,19 +436,79 @@ html {
   font-size: 10rem;
 }
 
-.swipe-btn-wrapper .but-nope, .swipe-btn-wrapper .but-yay {
+.swipe-btn-wrapper #nope, .swipe-btn-wrapper #love {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.filter-dropdown-wrapper .filter-dropdown-btn button, .swiper ul .card {
+.welcome-wrapper .login-btn-wrapper .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
-.swipe-btn-wrapper .but-nope, .swipe-btn-wrapper .but-yay {
+.swipe-btn-wrapper #nope, .swipe-btn-wrapper #love {
   width: 60px;
   height: 60px;
   background: #2f6457;
   border-radius: 10px;
+}
+
+.welcome-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../public/img/ワイヤー/bg.png);
+  background-position: center;
+  background-size: cover;
+}
+.welcome-wrapper .city {
+  background-image: url(../../public/img/ワイヤー/city.png);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  pointer-events: none;
+}
+.welcome-wrapper .logo {
+  padding-top: 40rem;
+  background-image: url(../../public/img/ワイヤー/Sakamachi.svg);
+  background-size: contain;
+  background-position: bottom;
+  width: 28rem;
+  height: 16rem;
+  position: relative;
+  right: 0;
+  margin: 0 auto;
+}
+.welcome-wrapper .welcome-text {
+  color: #f5f5f7;
+  text-align: center;
+  padding: 3rem 0 10rem 0;
+}
+.welcome-wrapper .welcome-text p {
+  font-size: 1.6rem;
+}
+.welcome-wrapper .login-btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.welcome-wrapper .login-btn-wrapper .login {
+  width: 20.5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background: #fabc60;
+  color: #2f6457;
+  text-align: center;
+}
+.welcome-wrapper .login-btn-wrapper .login a {
+  height: inherit;
+  width: inherit;
+  text-decoration: none;
+  color: #39695e;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  display: block;
 }
 
 .navbar-wrapper {
@@ -612,97 +672,10 @@ html {
   transform: translateY(0%);
 }
 
-.swiper {
-  position: relative;
-  padding-top: 20px;
-  width: 100%;
-}
-.swiper ul .card {
-  position: absolute;
-  display: none;
-  z-index: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 355px;
-  height: 520px;
-  border-radius: 10px;
-  transform-origin: 50% 99%;
-}
-.swiper ul .card.current {
-  display: block;
-  transform-origin: 50% 99%;
-}
-.swiper ul .card .swiper-image {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: right center;
-}
-.swiper ul .card .beer-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #2f6457;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-.swiper ul .card .swiper-text {
-  color: #f5f5f7;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  position: absolute;
-  bottom: 90px;
-  padding: 10px;
-  width: fit-content;
-  left: 30%;
-  background: hsla(0, 0%, 100%, 0.1);
-  border-radius: 5px;
-}
-.swiper ul .card .swiper-text .swiper-name {
-  font-size: 1.2rem;
-}
-.swiper ul .card .swiper-text .swiper-time {
-  margin-top: 10px;
-  font-size: 1.6rem;
-}
-.swiper ul .card .swiper-info {
-  position: absolute;
-  bottom: 25px;
-  right: 37%;
-  text-align: center;
-}
-.swiper ul .card .swiper-info a {
-  font-size: 1.6rem;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  color: #f5f5f7;
-  display: block;
-}
-.swiper ul .card .swiper-info a::before {
-  content: "\f059";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 400;
-  margin-right: 5px;
-}
-
-.rotate-left {
-  animation: nope 0.7s ease-out;
-}
-
-.rotate-right {
-  animation: yay 0.7s ease-out;
-}
-
 .swipe-btn-wrapper {
   width: 100%;
-  position: fixed;
-  bottom: 5rem;
+  position: relative;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;
@@ -731,16 +704,16 @@ html {
   width: 100%;
   height: 100%;
 }
-.swipe-btn-wrapper .but-nope {
+.swipe-btn-wrapper #nope {
   font-size: 5rem;
 }
-.swipe-btn-wrapper .but-nope button {
+.swipe-btn-wrapper #nope button {
   padding: 4px 0px;
 }
-.swipe-btn-wrapper .but-yay {
+.swipe-btn-wrapper #love {
   font-size: 3.8rem;
 }
-.swipe-btn-wrapper .but-yay button {
+.swipe-btn-wrapper #love button {
   padding: 10px 0px;
 }
 .swipe-btn-wrapper .counter-wrapper {
@@ -751,23 +724,147 @@ html {
   top: -3rem;
 }
 
-@keyframes yay {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(40deg) translateY(-80px);
-    opacity: 0;
-  }
+.tinder {
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
 }
-@keyframes nope {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(-40deg) translateY(-80px);
-    opacity: 0;
-  }
+.tinder.loaded.tinder {
+  opacity: 1;
+}
+.tinder .tinder--status {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+.tinder .tinder--status i {
+  font-size: 100px;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+}
+.tinder .tinder_love .fa-heart {
+  opacity: 0.7;
+  transform: scale(1);
+}
+.tinder .tinder_nope .fa-remove {
+  opacity: 0.7;
+  transform: scale(1);
+}
+.tinder .tinder--cards {
+  position: relative;
+  flex-grow: 1;
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.tinder .tinder--cards .tinder--card {
+  display: inline-block;
+  width: 355px;
+  height: 520px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  cursor: grab;
+}
+.tinder .tinder--cards .tinder--card .swiper-image {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: right center;
+}
+.tinder .tinder--cards .tinder--card .beer-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2f6457;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+}
+.tinder .tinder--cards .tinder--card .beer-icon .beer-status {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-image: url(../../public/img/icon/ion_beer-sharp.svg);
+  background-size: contain;
+}
+.tinder .tinder--cards .tinder--card .swiper-text {
+  color: #f5f5f7;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 90px;
+  padding: 10px;
+  width: fit-content;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 5px;
+}
+.tinder .tinder--cards .tinder--card .swiper-text .swiper-name {
+  font-size: 1.2rem;
+}
+.tinder .tinder--cards .tinder--card .swiper-text .swiper-time {
+  margin-top: 10px;
+  font-size: 1.6rem;
+}
+.tinder .tinder--cards .tinder--card .swiper-info {
+  position: absolute;
+  bottom: 25px;
+  right: 37%;
+  text-align: center;
+}
+.tinder .tinder--cards .tinder--card .swiper-info button {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #f5f5f7;
+  display: block;
+}
+.tinder .tinder--cards .tinder--card .swiper-info button::before {
+  content: "\f059";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  margin-right: 5px;
+}
+.tinder .tinder--cards .moving.card {
+  transition: none;
+  cursor: grabbing;
+}
+
+.swiper-modal {
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+  width: 355px;
+  height: 520px;
+  position: absolute;
+  z-index: 100;
+  border: solid 1px tomato;
+  color: #f5f5f7;
 }

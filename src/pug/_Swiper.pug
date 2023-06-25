@@ -1,8 +1,12 @@
-.swiper
-  ul
-    li.card.current
+.tinder
+  .tinder--status
+    i(class="fa fa-remove")
+    i(class="fa fa-bookmark")
+  .tinder--cards
+    .tinder--card
       .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);")
       .beer-icon
+        .beer-status
       .swiper-text
         .swiper-name
           h1 鳥貴族
@@ -10,43 +14,48 @@
           p 19:00 ~ 翌 5:00
       .swiper-info
         .info-text
-          a(href="#") 詳細を見る
-    li.card
-        .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80);")
-        .beer-icon
-        .swiper-text
-          .swiper-name
-            h1 鳥貴族
-          .swiper-time
-            p 20:00 ~ 翌 5:30
-        .swiper-info
-          .info-text
-            a(href="#") 詳細を見る
-    li.card
-      .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1622827855145-0afff4452387?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);")
+          button 詳細を見る
+    //- include _swiper_modal1
+    .tinder--card
+      .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80);")
       .beer-icon
+        .beer-status
       .swiper-text
         .swiper-name
-          h1 鳥貴族
+          h1 酒街屋 茶屋町店
+        .swiper-time
+          p 20:00 ~ 翌 5:30
+      .swiper-info
+        .info-text
+          button 詳細を見る
+    .tinder--card
+      .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1622827855145-0afff4452387?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);")
+      .beer-icon
+        .beer-status
+      .swiper-text
+        .swiper-name
+          h1 ビランチャ 梅田店
         .swiper-time
           p 18:00 ~ 翌 4:00
       .swiper-info
         .info-text
-          a(href="#") 詳細を見る
-    li.card
+          button 詳細を見る
+    .tinder--card
       .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1572299448190-d7a84f6e6bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);")
       .beer-icon
+        .beer-status
       .swiper-text
         .swiper-name
-          h1 鳥貴族
+          h1 うどたま 中崎町店
         .swiper-time
           p 17:00 ~ 翌 3:00
       .swiper-info
         .info-text
-          a(href="#") 詳細を見る
-    li.card
+          button 詳細を見る
+    .tinder--card
       .swiper-image(style="background-image: url(https://images.unsplash.com/photo-1576661929310-a29e8fc38c7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);")
       .beer-icon
+        .beer-status
       .swiper-text
         .swiper-name
           h1 鳥貴族
@@ -54,5 +63,5 @@
           p 17:00 ~ 翌 3:00
       .swiper-info
         .info-text
-          a(href="#") 詳細を見る
+          button 詳細を見る
   include _swipe_Button

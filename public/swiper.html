@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <title> </title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="css/Style.css">
   </head>
   <body>
@@ -73,11 +73,15 @@
         <button>絞り込み</button>
       </div>
     </div>
-    <div class="swiper">
-      <ul>
-        <li class="card current">
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"> </script>
+    <div class="tinder">
+      <div class="tinder--status"><i class="fa fa-remove"></i><i class="fa fa-bookmark"></i></div>
+      <div class="tinder--cards">
+        <div class="tinder--card">
           <div class="swiper-image" style="background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60);"></div>
-          <div class="beer-icon"></div>
+          <div class="beer-icon">
+            <div class="beer-status"></div>
+          </div>
           <div class="swiper-text">
             <div class="swiper-name">
               <h1>鳥貴族</h1>
@@ -87,57 +91,73 @@
             </div>
           </div>
           <div class="swiper-info">
-            <div class="info-text"><a href="#">詳細を見る</a></div>
+            <div class="info-text">
+              <button>詳細を見る</button>
+            </div>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="tinder--card">
           <div class="swiper-image" style="background-image: url(https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1074&amp;q=80);"></div>
-          <div class="beer-icon"></div>
+          <div class="beer-icon">
+            <div class="beer-status"></div>
+          </div>
           <div class="swiper-text">
             <div class="swiper-name">
-              <h1>鳥貴族</h1>
+              <h1>酒街屋 茶屋町店</h1>
             </div>
             <div class="swiper-time">
               <p>20:00 ~ 翌 5:30</p>
             </div>
           </div>
           <div class="swiper-info">
-            <div class="info-text"><a href="#">詳細を見る</a></div>
+            <div class="info-text">
+              <button>詳細を見る</button>
+            </div>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="tinder--card">
           <div class="swiper-image" style="background-image: url(https://images.unsplash.com/photo-1622827855145-0afff4452387?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60);"></div>
-          <div class="beer-icon"></div>
+          <div class="beer-icon">
+            <div class="beer-status"></div>
+          </div>
           <div class="swiper-text">
             <div class="swiper-name">
-              <h1>鳥貴族</h1>
+              <h1>ビランチャ 梅田店</h1>
             </div>
             <div class="swiper-time">
               <p>18:00 ~ 翌 4:00</p>
             </div>
           </div>
           <div class="swiper-info">
-            <div class="info-text"><a href="#">詳細を見る</a></div>
+            <div class="info-text">
+              <button>詳細を見る</button>
+            </div>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="tinder--card">
           <div class="swiper-image" style="background-image: url(https://images.unsplash.com/photo-1572299448190-d7a84f6e6bc9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60);"></div>
-          <div class="beer-icon"></div>
+          <div class="beer-icon">
+            <div class="beer-status"></div>
+          </div>
           <div class="swiper-text">
             <div class="swiper-name">
-              <h1>鳥貴族</h1>
+              <h1>うどたま 中崎町店</h1>
             </div>
             <div class="swiper-time">
               <p>17:00 ~ 翌 3:00</p>
             </div>
           </div>
           <div class="swiper-info">
-            <div class="info-text"><a href="#">詳細を見る</a></div>
+            <div class="info-text">
+              <button>詳細を見る</button>
+            </div>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="tinder--card">
           <div class="swiper-image" style="background-image: url(https://images.unsplash.com/photo-1576661929310-a29e8fc38c7f?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGJhcnxlbnwwfHwwfHx8MA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60);"></div>
-          <div class="beer-icon"></div>
+          <div class="beer-icon">
+            <div class="beer-status"></div>
+          </div>
           <div class="swiper-text">
             <div class="swiper-name">
               <h1>鳥貴族</h1>
@@ -147,16 +167,18 @@
             </div>
           </div>
           <div class="swiper-info">
-            <div class="info-text"><a href="#">詳細を見る</a></div>
+            <div class="info-text">
+              <button>詳細を見る</button>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
       <div class="swipe-btn-wrapper">
-        <button class="fa-solid fa-xmark but-nope"></button>
+        <button class="fa-solid fa-xmark" id="nope"></button>
         <div class="choose-here-btn">
           <button class="choose-here">ここにする！</button>
         </div>
-        <button class="fa-solid fa-bookmark but-yay"></button>
+        <button class="fa-solid fa-bookmark" id="love"></button>
         <p class="counter-wrapper"><span class="counter">0</span>/10</p>
       </div>
     </div>
