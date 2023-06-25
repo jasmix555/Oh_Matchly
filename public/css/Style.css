@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap"); /*!
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"); /*!
  * ress.css • v1.1.2
  * MIT License
  * github.com/filipelinhares/ress
@@ -440,18 +440,30 @@ html {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.welcome-wrapper .login-btn-wrapper .login, .welcome-wrapper .login-btn-wrapper .register, .filter-dropdown-wrapper .filter-dropdown-btn button {
+.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .login-page .login-form .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
-.welcome-wrapper .login-btn-wrapper .login, .welcome-wrapper .login-btn-wrapper .register {
+.main-bg .logo, .login-page .logo {
+  padding-top: 38rem;
+  background-image: url(../../public/img/ワイヤー/Sakamachi.svg);
+  background-size: contain;
+  background-position: center bottom;
+  width: 24rem;
+  height: 15.8859rem;
+  position: relative;
+  left: 1rem;
+  margin: 0 auto;
+}
+
+.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .login-page .login-form .login {
   width: 20.5rem;
   height: 5rem;
   border-radius: 1rem;
   background: #fabc60;
   text-align: center;
 }
-.welcome-wrapper .login-btn-wrapper .login a, .welcome-wrapper .login-btn-wrapper .register a {
+.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .login-page .login-form .login a {
   color: #2f6457;
   height: inherit;
   width: inherit;
@@ -470,14 +482,14 @@ html {
   border-radius: 10px;
 }
 
-.welcome-wrapper {
+.main-bg {
   height: 100vh;
   width: 100vw;
   background-image: url(../../public/img/ワイヤー/bg.png);
   background-position: center;
   background-size: cover;
 }
-.welcome-wrapper .city {
+.main-bg .city {
   background-image: url(../../public/img/ワイヤー/city.png);
   height: 100vh;
   width: 100vw;
@@ -485,39 +497,106 @@ html {
   pointer-events: none;
   z-index: -1;
 }
-.welcome-wrapper .logo {
-  padding-top: 38rem;
-  background-image: url(../../public/img/ワイヤー/Sakamachi.svg);
-  background-size: contain;
-  background-position: center bottom;
-  width: 24rem;
-  height: 15.8859rem;
-  position: relative;
-  left: 1rem;
-  margin: 0 auto;
-}
-.welcome-wrapper .welcome-text {
+.main-bg .welcome-text {
   color: #f5f5f7;
   text-align: center;
   padding: 3rem 0 10rem 0;
 }
-.welcome-wrapper .welcome-text p {
+.main-bg .welcome-text p {
   font-size: 1.6rem;
 }
-.welcome-wrapper .login-btn-wrapper {
+.main-bg .login-btn-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
-.welcome-wrapper .login-btn-wrapper .register {
+.main-bg .login-btn-wrapper .register {
   background: #2f6457;
 }
-.welcome-wrapper .login-btn-wrapper .register a {
+.main-bg .login-btn-wrapper .register a {
   color: #f5f5f7;
 }
 
+.login-page {
+  position: relative;
+}
+.login-page .logo {
+  padding-top: 24rem;
+  width: 18rem;
+  height: 11.3471rem;
+}
+.login-page .icon {
+  position: absolute;
+  color: #f5f5f7;
+  width: 4rem;
+  height: 4rem;
+}
+.login-page .login-form {
+  position: absolute;
+  bottom: 0;
+  background: #2f6457;
+  width: 100%;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.login-page .login-form h1 {
+  color: #f5f5f7;
+  font-size: 2.4rem;
+  padding: 3rem;
+}
+.login-page .login-form .field-wrapper {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.login-page .login-form .field-wrapper input {
+  box-sizing: border-box;
+  width: 325px;
+  height: 56px;
+  position: relative;
+  background: #225144;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  padding-left: 20px;
+  outline: none;
+  color: #f5f5f7;
+}
+.login-page .login-form .field-wrapper input:-ms-input-placeholder {
+  color: #629693;
+}
+.login-page .login-form .field-wrapper input::placeholder {
+  color: #629693;
+}
+.login-page .login-form .field-wrapper input::-ms-reveal {
+  color: #629693;
+}
+.login-page .login-form .field-wrapper .password-wrapper {
+  position: relative;
+  display: flex;
+}
+.login-page .login-form .field-wrapper .password-wrapper button {
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  color: #629693;
+  line-height: 5.6rem;
+  padding: 0 1.6rem;
+}
+.login-page .login-form .forgot {
+  padding: 2rem 0 8rem 0;
+}
+.login-page .login-form .forgot a {
+  text-decoration: underline;
+  color: #f5f5f7;
+  font-size: 1.2rem;
+}
 .navbar-wrapper {
   height: 100px;
   position: relative;
@@ -682,7 +761,7 @@ html {
 .swipe-btn-wrapper {
   width: 100%;
   position: relative;
-  bottom: 0;
+  bottom: 1rem;
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;

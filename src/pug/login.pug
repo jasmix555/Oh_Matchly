@@ -1,0 +1,23 @@
+doctype html
+html(lang="ja")
+    head
+      include _temp_p_head
+      title Welcome Page
+      link(rel="stylesheet", href="css/Style.css")
+    body
+      .main-bg.login-page
+        .city
+        .logo
+        .login-form
+          h1 ログイン
+          .field-wrapper
+            input(type="text" name="username" placeholder="ユーザー名またはメールアドレス")
+            .password-wrapper
+              input(type="password" name="password" placeholder="パスワード")#text_password
+              button#toggle_password.fa-solid.fa-eye-slash
+          .forgot
+            a(href="#") パスワードを忘れた方はこちら
+          .login
+            a(href="home.html") サインイン
+      include _temp_p_foot
+      script(src="js/password.js") 
