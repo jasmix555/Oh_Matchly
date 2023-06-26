@@ -30,3 +30,18 @@ shiboru.addEventListener("click", (e) => {
     dropdown.style.display = "none";
   }
 });
+
+const modalBtn = document.querySelectorAll(".modal-btn");
+const modalPage = document.querySelectorAll(".swiper-modal");
+
+modalBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    // Hide all swiper-modal elements
+    modalPage.forEach((page) => {
+      page.style.display = "none";
+    });
+
+    // Show the corresponding swiper-modal based on the button index
+    modalPage[index].style.display = "block";
+  });
+});
