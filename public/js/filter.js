@@ -36,12 +36,18 @@ const modalPage = document.querySelectorAll(".swiper-modal");
 
 modalBtn.forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    // Hide all swiper-modal elements
-    modalPage.forEach((page) => {
-      page.style.display = "none";
-    });
+    for (let i = 0; i < modalPage.length; i++) {
+      if (i <= index) {
+        modalPage[i].style.display = "block";
+      } else {
+        modalPage[i].style.display = "none";
+      }
+    }
+  });
+});
 
-    // Show the corresponding swiper-modal based on the button index
-    modalPage[index].style.display = "block";
+modalPage.forEach((page) => {
+  page.addEventListener("click", () => {
+    page.style.display = "none";
   });
 });
