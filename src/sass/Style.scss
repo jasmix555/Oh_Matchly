@@ -14,7 +14,7 @@
     width: 100vw;
     position: absolute;
     pointer-events: none;
-    z-index: -1;
+    z-index: 2;
   }
   .logo {
     @extend %sakamachi;
@@ -44,6 +44,106 @@
       a {
         color: index.$white;
       }
+    }
+  }
+  .selection-btn-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .selection-btn {
+      @extend %box-shdw;
+      @extend %big-btn;
+    }
+  }
+  .age-confirm-wrapper {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    background: index.$sub_clr;
+    width: 100%;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding-top: 120px;
+    .age-confirm-pic {
+      height: 22rem;
+      width: 22rem;
+      position: absolute;
+      top: -110px;
+      border-radius: 50%;
+      background-image: url(../../public/img/ワイヤー/warning.svg);
+      background-position: center;
+      background-size: 112%;
+    }
+    .warning-text {
+      text-align: center;
+      padding-bottom: 3rem;
+      color: index.$white;
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 500;
+        &::before {
+          content: "\f071";
+          font-weight: 600;
+          font-family: "Font Awesome 6 Free";
+          margin-right: 5px;
+          color: index.$main_clr;
+          font-size: 3rem;
+          position: absolute;
+          left: 30%;
+        }
+      }
+      p {
+        padding-top: 0.8rem;
+        font-size: 1.6rem;
+        align-items: center;
+      }
+    }
+    .age-confirm-btn-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      .age-confirm-btn {
+        @extend %box-shdw;
+        @extend %big-btn;
+      }
+      .reject {
+        @extend %box-shdw;
+        @extend %big-btn;
+        background: index.$sub_clr;
+        a {
+          color: index.$white;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .new-regist {
+    h1 {
+      text-align: center;
+      color: #ddfffb;
+      font-size: 2.4rem;
+      line-height: 18rem;
+    }
+    .register-form {
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      background: index.$sub_clr;
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
     }
   }
 }
@@ -378,14 +478,6 @@
       margin-left: -50px;
     }
   }
-  .tinder_love .fa-heart {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  .tinder_nope .fa-remove {
-    opacity: 0.7;
-    transform: scale(1);
-  }
   .tinder--cards {
     position: relative;
     flex-grow: 1;
@@ -509,7 +601,7 @@
     margin: 1.2rem auto;
     .modal-name {
       padding: 4rem 3rem 2rem 3rem;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       h1 {
         text-align: center;
       }

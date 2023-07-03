@@ -440,7 +440,7 @@ html {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .login-page .login-form .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
+.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .main-bg .selection-btn-wrapper .selection-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject, .login-page .login-form .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -456,14 +456,15 @@ html {
   margin: 0 auto;
 }
 
-.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .login-page .login-form .login {
+.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .main-bg .selection-btn-wrapper .selection-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject, .login-page .login-form .login {
   width: 20.5rem;
   height: 5rem;
   border-radius: 1rem;
   background: #fabc60;
   text-align: center;
+  z-index: 5;
 }
-.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .login-page .login-form .login a {
+.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .main-bg .selection-btn-wrapper .selection-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject a, .login-page .login-form .login a {
   color: #2f6457;
   height: inherit;
   width: inherit;
@@ -502,7 +503,7 @@ html {
   width: 100vw;
   position: absolute;
   pointer-events: none;
-  z-index: -1;
+  z-index: 2;
 }
 .main-bg .welcome-text {
   color: #f5f5f7;
@@ -524,6 +525,94 @@ html {
 }
 .main-bg .login-btn-wrapper .register a {
   color: #f5f5f7;
+}
+.main-bg .selection-btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.main-bg .age-confirm-wrapper {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  background: #2f6457;
+  width: 100%;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding-top: 120px;
+}
+.main-bg .age-confirm-wrapper .age-confirm-pic {
+  height: 22rem;
+  width: 22rem;
+  position: absolute;
+  top: -110px;
+  border-radius: 50%;
+  background-image: url(../../public/img/ワイヤー/warning.svg);
+  background-position: center;
+  background-size: 112%;
+}
+.main-bg .age-confirm-wrapper .warning-text {
+  text-align: center;
+  padding-bottom: 3rem;
+  color: #f5f5f7;
+}
+.main-bg .age-confirm-wrapper .warning-text h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.main-bg .age-confirm-wrapper .warning-text h1::before {
+  content: "\f071";
+  font-weight: 600;
+  font-family: "Font Awesome 6 Free";
+  margin-right: 5px;
+  color: #fabc60;
+  font-size: 3rem;
+  position: absolute;
+  left: 30%;
+}
+.main-bg .age-confirm-wrapper .warning-text p {
+  padding-top: 0.8rem;
+  font-size: 1.6rem;
+  align-items: center;
+}
+.main-bg .age-confirm-wrapper .age-confirm-btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject {
+  background: #2f6457;
+}
+.main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject a {
+  color: #f5f5f7;
+  font-weight: 400;
+}
+.main-bg .new-regist h1 {
+  text-align: center;
+  color: #ddfffb;
+  font-size: 2.4rem;
+  line-height: 18rem;
+}
+.main-bg .new-regist .register-form {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  background: #2f6457;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .login-page {
@@ -848,14 +937,6 @@ html {
   width: 100px;
   margin-left: -50px;
 }
-.tinder .tinder_love .fa-heart {
-  opacity: 0.7;
-  transform: scale(1);
-}
-.tinder .tinder_nope .fa-remove {
-  opacity: 0.7;
-  transform: scale(1);
-}
 .tinder .tinder--cards {
   position: relative;
   flex-grow: 1;
@@ -978,7 +1059,7 @@ html {
 }
 .swiper-modal .modal-content .modal-name {
   padding: 4rem 3rem 2rem 3rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .swiper-modal .modal-content .modal-name h1 {
   text-align: center;
