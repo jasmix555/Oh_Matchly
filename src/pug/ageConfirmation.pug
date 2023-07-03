@@ -1,0 +1,20 @@
+doctype html
+html(lang="ja")
+    head
+      include _temp_p_head
+      title Age Confirmation
+      link(rel="stylesheet", href="css/Style.css")
+    body
+      .main-bg
+        .city
+        .age-confirm-wrapper
+          .age-confirm-pic
+          .warning-text
+            h1 年齢確認
+            p このアプリは20歳未満の方は使用できません。
+          .age-confirm-btn-wrapper
+            .age-confirm-btn
+              a(href="newRegister.html") 私は20歳以上です
+            .reject
+              a(href="reject.html") 20歳未満です
+      include _temp_p_foot
