@@ -13,7 +13,7 @@ const two = document.querySelector(".two");
 const three = document.querySelector(".three");
 
 const capsules = document.querySelectorAll(".capsule");
-console.log(capsules);
+// console.log(capsules);
 
 const purple = document.querySelector(".purple");
 const yellow = document.querySelector(".yellow");
@@ -63,30 +63,32 @@ btn.addEventListener("click", (e) => {
     });
   }
 
+  for (let i = 0; i < close.length; i++) {
+    close[i].addEventListener("click", () => {
+      if (i === 0) {
+        console.log("one削除");
+        toggle(one, "active");
+      } else if (i === 1) {
+        console.log("two削除");
+        toggle(two, "active");
+      } else {
+        console.log("three削除");
+        toggle(three, "active");
+      }
+      toggle(ball, "active");
+      toggle(capsule, "active");
+      toggle(capsules[index], "active"); // Toggle the specific capsule element
+    });
+  }
+
   // close.forEach((e, index) => {
+  //   console.log(e);
   //   e.addEventListener("click", () => {
   //     console.log("削除");
   //     toggle(random, "active");
   //     toggle(ball, "active");
+  //     console.log("削除したよ");
   //     toggle(capsule, "active");
-  //     toggle(capsules[index], "active"); // Toggle the specific capsule element
   //   });
   // });
-  close.forEach((e, index) => {
-    e.addEventListener("click", () => {
-      console.log("削除");
-      toggle(random, "active");
-      toggle(ball, "active");
-      toggle(capsule, "active");
-
-      // Toggle the active class on all capsules except the one being closed
-      for (let i = 0; i < capsules.length; i++) {
-        if (i !== index) {
-          toggle(capsules[i], "active");
-        }
-      }
-
-      toggle(capsules[index], "active"); // Toggle the specific capsule element
-    });
-  });
 });
