@@ -14,7 +14,7 @@
     width: 100vw;
     position: absolute;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
   }
   .logo {
     @extend %sakamachi;
@@ -133,7 +133,6 @@
       line-height: 18rem;
     }
     .register-form {
-      z-index: 0;
       position: absolute;
       bottom: 0;
       background: index.$sub_clr;
@@ -150,6 +149,7 @@
           font-size: 1.6rem;
           color: index.$white;
           padding: 1rem;
+          font-weight: 400;
         }
         input {
           background: index.$field;
@@ -158,6 +158,53 @@
           height: 4rem;
           font-size: 1.4rem;
           padding: 1.4rem 0 1.4rem 2rem;
+          border: solid 1px index.$field_brdr;
+          color: index.$white;
+          outline: none;
+          &::placeholder {
+            color: index.$field_clr;
+          }
+        }
+        .register-age {
+          display: flex;
+          align-items: center;
+          input[type="number"]::-webkit-inner-spin-button {
+            opacity: 1;
+          }
+          p {
+            color: index.$white;
+            font-size: 1.6rem;
+            padding: 1rem;
+          }
+          #age-field {
+            width: 30%;
+          }
+        }
+      }
+      .register-gender {
+        display: flex;
+        gap: 1.2rem;
+        button {
+          width: 6rem;
+          height: 4rem;
+          border: solid 1px index.$field_brdr;
+          background: index.$field;
+          border-radius: 1rem;
+          font-size: 1.4rem;
+          color: index.$field_clr;
+        }
+        .selected {
+          background: index.$main_clr;
+          color: index.$sub_clr;
+        }
+      }
+      .register-btn {
+        margin-top: 2.2rem;
+        @extend %big-btn;
+        width: 9rem;
+        height: 4rem;
+        a {
+          line-height: 4rem;
         }
       }
     }

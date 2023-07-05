@@ -74,3 +74,8 @@ html {
   margin: 0 auto;
   padding: 1rem;
 }
+
+%selected {
+  background: index.$main_clr;
+  color: index.$sub_clr;
+}
