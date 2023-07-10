@@ -133,7 +133,7 @@
       line-height: 18rem;
     }
     .register-form {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       background: index.$sub_clr;
       width: 100%;
@@ -143,21 +143,22 @@
       align-items: center;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
+      overflow-x: scroll;
       .register-field {
         width: 80%;
         h2 {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           color: index.$white;
           padding: 1rem;
           font-weight: 400;
         }
         input {
-          background: index.$field;
-          border-radius: 1rem;
           width: 100%;
           height: 4rem;
           font-size: 1.4rem;
+          border-radius: 1rem;
           padding: 1.4rem 0 1.4rem 2rem;
+          background: index.$field;
           border: solid 1px index.$field_brdr;
           color: index.$white;
           outline: none;
@@ -168,8 +169,20 @@
         .register-age {
           display: flex;
           align-items: center;
-          input[type="number"]::-webkit-inner-spin-button {
-            opacity: 1;
+          position: relative;
+          select {
+            outline: none;
+            background: index.$field;
+            border: solid 1px index.$field_brdr;
+            border-radius: 1rem;
+            color: index.$white;
+            width: 7rem;
+            height: 4rem;
+            font-size: 1.4rem;
+            text-align: center;
+            option {
+              color: red;
+            }
           }
           p {
             color: index.$white;
@@ -402,36 +415,11 @@
     .filter-genre {
       padding-bottom: 1rem;
       border-bottom: 1px solid #878787;
+      @extend %filters;
     }
     h2 {
       color: index.$main_clr;
       padding-top: 1rem;
-    }
-    ul {
-      margin-top: 5px;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      li {
-        width: auto;
-        height: auto;
-        font-size: 1.4rem;
-        a {
-          background: #28564b;
-          border-radius: 1rem;
-          padding: 2px 15px;
-          width: 100%;
-          height: 100%;
-          display: block;
-          color: index.$white;
-          text-decoration: none;
-        }
-        .selected {
-          background: index.$main_clr;
-          color: index.$sub_clr;
-        }
-      }
     }
   }
   .filter-dropdown-btn {
@@ -663,7 +651,7 @@
     }
     margin: 1.2rem auto;
     .modal-name {
-      padding: 4rem 3rem 2rem 3rem;
+      padding: 2rem;
       font-size: 1.6rem;
       h1 {
         text-align: center;
@@ -679,10 +667,27 @@
         font-size: 2rem;
       }
     }
+    .modal-genre {
+      width: 100%;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 4rem;
+        li {
+          list-style: none;
+          font-size: 1.6rem;
+          background: index.$main_clr;
+          color: index.$sub_clr;
+          border-radius: 1rem;
+          padding: 2px 15px;
+        }
+      }
+    }
     .modal-seat {
       @extend %modal-border;
       p {
         color: index.$grey;
+        font-size: 1.1rem;
       }
     }
     .modal-price {

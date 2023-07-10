@@ -25,7 +25,9 @@ html(lang="ja")
             .register-field
               h2 年齢
               .register-age
-                input(type="number" min="20" id="age-field")
+                select(name='age')
+                  each i in Array.from({ length: 81 }, (_, index) => index + 1)
+                    option(value=i)= i
                 p 際
             .register-field
               h2 メーリアドレス

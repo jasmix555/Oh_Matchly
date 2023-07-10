@@ -79,3 +79,32 @@ html {
   background: index.$main_clr;
   color: index.$sub_clr;
 }
+
+%filters {
+  ul {
+    margin-top: 5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      width: auto;
+      height: auto;
+      font-size: 1.4rem;
+      a {
+        background: #28564b;
+        border-radius: 1rem;
+        padding: 2px 15px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: index.$white;
+        text-decoration: none;
+      }
+      .selected {
+        background: index.$main_clr;
+        color: index.$sub_clr;
+      }
+    }
+  }
+}
