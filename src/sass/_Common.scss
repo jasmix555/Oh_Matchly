@@ -6,7 +6,6 @@ html {
   font-size: 62.5%;
   background: index.$base_clr;
   font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
 }
 
 @each $size in index.$sizes {

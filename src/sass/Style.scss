@@ -135,7 +135,7 @@
     .register-form {
       position: fixed;
       bottom: 0;
-      padding-bottom: 10rem;
+      padding-bottom: 6rem;
       background: index.$sub_clr;
       width: 100%;
       height: 80%;
@@ -299,11 +299,11 @@
 }
 
 .navbar-wrapper {
-  height: 100px;
+  height: 8rem;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 25px;
+  padding: 2.5rem;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -450,7 +450,6 @@
 .swipe-btn-wrapper {
   width: 100%;
   position: relative;
-  bottom: 1rem;
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;
@@ -496,10 +495,10 @@
   }
   .counter-wrapper {
     position: absolute;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: index.$white;
-    right: 4.2rem;
-    top: -3rem;
+    right: 4.8rem;
+    top: -2rem;
   }
 }
 
