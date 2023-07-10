@@ -437,17 +437,19 @@ html {
 }
 
 .wrapper {
-  height: 800px;
+  position: relative;
+  height: 744px;
   width: 100%;
 }
 .wrapper h2 {
+  font-weight: normal;
   font-size: 2.4rem;
   color: #fff;
   text-align: center;
 }
 .wrapper .innerWrap {
   margin: 0 auto;
-  height: 540px;
+  height: 580px;
   width: 332px;
   padding: 10px 25px 0 25px;
 }
@@ -510,9 +512,6 @@ html {
   height: 36px;
   border-radius: 10px;
   background-color: #fabc60;
-}
-.wrapper .book a {
-  text-decoration: none;
   color: #fff;
   font-size: 1.4rem;
 }
@@ -520,4 +519,41 @@ html {
   display: block;
   font-size: 1rem;
   color: #fff;
+}
+.wrapper .bookedWrap {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 390px;
+  height: 305px;
+  border-radius: 10px 10px 0 0;
+  background-color: #242f30;
+}
+.wrapper .bookedWrap .bookHead {
+  border-radius: 10px 10px 0 0;
+  height: 40px;
+  background-color: #fabc60;
+}
+.wrapper .bookedWrap .bookHead h4 {
+  font-size: 1.4em;
+  line-height: 38px;
+  font-weight: normal;
+  color: #242f30;
+}
+.wrapper .bookedWrap h2 {
+  margin: 25px 0 16px 0;
+}
+.wrapper .bookedWrap p {
+  font-size: 1.4em;
+  margin: 5px 0;
+}
+.wrapper .bookedWrap p.bookTxt {
+  font-size: 1em;
+}
+.wrapper .bookedWrap .tel {
+  font-size: 2.4em;
+  color: #fabc60;
 }

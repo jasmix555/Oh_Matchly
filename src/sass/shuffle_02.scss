@@ -2,16 +2,19 @@
 @use "Index" as index;
 
 .wrapper {
-  height: 800px;
+  position: relative;
+  // overflow: hidden;
+  height: 744px;
   width: 100%;
   h2 {
+    font-weight: normal;
     font-size: 2.4rem;
     color: #fff;
     text-align: center;
   }
   .innerWrap {
     margin: 0 auto;
-    height: 540px;
+    height: 580px;
     width: 332px;
     padding: 10px 25px 0 25px;
     .picture {
@@ -75,16 +78,50 @@
     height: 36px;
     border-radius: 10px;
     background-color: index.$main_clr;
-    // box-shadow: 2px 2px 3px #898787;
-    a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.4rem;
-    }
+    color: #fff;
+    font-size: 1.4rem;
   }
   .aside {
     display: block;
     font-size: 1rem;
     color: #fff;
+  }
+  .bookedWrap {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 390px;
+    height: 305px;
+    border-radius: 10px 10px 0 0;
+    background-color: index.$base_clr;
+    .bookHead {
+      border-radius: 10px 10px 0 0;
+
+      height: 40px;
+      background-color: index.$main_clr;
+      h4 {
+        font-size: 1.4em;
+        line-height: 38px;
+        font-weight: normal;
+        color: index.$base_clr;
+      }
+    }
+    h2 {
+      margin: 25px 0 16px 0;
+    }
+    p {
+      font-size: 1.4em;
+      margin: 5px 0;
+      &.bookTxt {
+        font-size: 1em;
+      }
+    }
+    .tel {
+      font-size: 2.4em;
+      color: index.$main_clr;
+    }
   }
 }

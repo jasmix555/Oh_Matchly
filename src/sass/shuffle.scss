@@ -94,6 +94,13 @@ body {
     height: 764px;
     background-image: url("../img/miki/shuffle_random_01.png");
     background-size: contain;
+    &.two {
+      background-image: url("../img/miki/shuffle_random_02.png");
+    }
+    &.three {
+      background-image: url("../img/miki/shuffle_random_03.png");
+    }
+
     .randomHead {
       width: 332px;
       height: 53px;
@@ -212,16 +219,16 @@ body {
         left: -60px;
       }
       &:nth-child(2) {
-        width: 94px;
-        height: 94px;
-        top: 10px;
-        left: 45px;
-      }
-      &:nth-child(3) {
         width: 74px;
         height: 74px;
-        top: 20px;
-        left: 155px;
+        top: 15px;
+        left: 55px;
+      }
+      &:nth-child(3) {
+        width: 94px;
+        height: 94px;
+        top: 8px;
+        left: 145px;
       }
     }
 

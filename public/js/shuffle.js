@@ -21,7 +21,7 @@ const red = document.querySelector(".red");
 
 const close = document.querySelectorAll(".fa-xmark");
 
-const btn = document.querySelector("button");
+const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", (e) => {
   btn.remove();
@@ -39,45 +39,7 @@ btn.addEventListener("click", (e) => {
     move02.classList.toggle("active");
     move.classList.toggle("active");
   });
-  // capsules.forEach((e) => {
-  //   console.log(e);
 
-  // });
-
-  //動かん
-  // function toggle(elem, className) {
-  //   elem.classList.toggle(className);
-  // }
-
-  // for (let i = 0; i < capsules.length; i++) {
-  //   capsules[i].addEventListener("click", () => {
-  //     if (i === 0) {
-  //       console.log("one");
-  //       toggle(one, "active");
-  //       ball.classList.toggle("active");
-  //       capsule.classList.toggle("active");
-  //     } else if (i === 1) {
-  //       console.log("two");
-  //       toggle(two, "active");
-  //       ball.classList.toggle("active");
-  //       capsule.classList.toggle("active");
-  //     } else {
-  //       console.log("three");
-  //       toggle(three, "active");
-  //       ball.classList.toggle("active");
-  //       capsule.classList.toggle("active");
-  //     }
-  //   });
-  // }
-
-  // close.forEach((e) => {
-  //   e.addEventListener("click", () => {
-  //     console.log("削除");
-  //     toggle(random, "active");
-  //     ball.classList.toggle("active");
-  //     capsule.classList.toggle("active");
-  //   });
-  // });
   console.log(close);
 
   function toggle(elem, className) {
@@ -117,15 +79,7 @@ btn.addEventListener("click", (e) => {
       toggle(capsule, "active");
     });
   }
-
-  // close.forEach((e, index) => {
-  //   console.log(e);
-  //   e.addEventListener("click", () => {
-  //     console.log("削除");
-  //     toggle(random, "active");
-  //     toggle(ball, "active");
-  //     console.log("削除したよ");
-  //     toggle(capsule, "active");
-  //   });
-  // });
 });
+
+const bookBtn = document.querySelector(`.book`);
+console.log(bookBtn);
