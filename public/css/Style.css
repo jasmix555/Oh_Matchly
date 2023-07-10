@@ -502,7 +502,7 @@ html {
   height: auto;
   font-size: 1.4rem;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li a {
+.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li button {
   background: #28564b;
   border-radius: 1rem;
   padding: 2px 15px;
