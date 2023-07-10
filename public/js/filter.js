@@ -9,7 +9,7 @@ filter_btn.addEventListener("click", (e) => {
   }
 });
 
-const filterSelect = document.querySelectorAll(".filter-genre li a");
+const filterSelect = document.querySelectorAll(".filter-genre li button");
 
 for (let i = 0; i < filterSelect.length; i++) {
   filterSelect[i].addEventListener("click", (e) => {

@@ -14,7 +14,7 @@
     width: 100vw;
     position: absolute;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
   }
   .logo {
     @extend %sakamachi;
@@ -133,9 +133,9 @@
       line-height: 18rem;
     }
     .register-form {
-      z-index: 0;
-      position: absolute;
+      position: fixed;
       bottom: 0;
+      padding-bottom: 6rem;
       background: index.$sub_clr;
       width: 100%;
       height: 80%;
@@ -144,6 +144,75 @@
       align-items: center;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
+      overflow-x: scroll;
+      .register-field {
+        width: 80%;
+        h2 {
+          font-size: 1.4rem;
+          color: index.$white;
+          padding: 1rem;
+          font-weight: 400;
+        }
+        input {
+          width: 100%;
+          height: 4rem;
+          font-size: 1.4rem;
+          border-radius: 1rem;
+          padding: 1.4rem 0 1.4rem 2rem;
+          background: index.$field;
+          border: solid 1px index.$field_brdr;
+          color: index.$white;
+          outline: none;
+          &::placeholder {
+            color: index.$field_clr;
+          }
+        }
+        .register-age {
+          display: flex;
+          align-items: center;
+          position: relative;
+          input {
+            &::-webkit-inner-spin-button {
+              display: none;
+            }
+          }
+          p {
+            color: index.$white;
+            font-size: 1.6rem;
+            padding: 1rem;
+          }
+          #age-field {
+            width: 30%;
+          }
+        }
+      }
+      .register-gender {
+        display: flex;
+        gap: 1.2rem;
+        button {
+          width: 6rem;
+          height: 4rem;
+          border: solid 1px index.$field_brdr;
+          background: index.$field;
+          border-radius: 1rem;
+          font-size: 1.4rem;
+          color: index.$field_clr;
+        }
+        .selected {
+          background: index.$main_clr;
+          color: index.$sub_clr;
+        }
+      }
+      .register-btn {
+        margin-top: 2.2rem;
+        @extend %big-btn;
+        @extend %box-shdw;
+        width: 9rem;
+        height: 4rem;
+        a {
+          line-height: 4rem;
+        }
+      }
     }
   }
 }
@@ -230,11 +299,11 @@
 }
 
 .navbar-wrapper {
-  height: 100px;
+  height: 8rem;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 25px;
+  padding: 2.5rem;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -304,11 +373,22 @@
     .filter-arrow {
       position: absolute;
       right: 1rem;
-      height: 20px;
-      width: 20px;
+      width: 100%;
+      height: 100%;
+      right: 0;
       button {
+        width: inherit;
+        height: inherit;
+        text-align: end;
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f0d7";
+          display: block;
+          font-size: 3rem;
+          padding-right: 1.4rem;
+        }
         line-height: 3.4rem;
-        font-size: 2rem;
         color: index.$main_clr;
       }
     }
@@ -339,36 +419,11 @@
     .filter-genre {
       padding-bottom: 1rem;
       border-bottom: 1px solid #878787;
+      @extend %filters;
     }
     h2 {
       color: index.$main_clr;
       padding-top: 1rem;
-    }
-    ul {
-      margin-top: 5px;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      li {
-        width: auto;
-        height: auto;
-        font-size: 1.4rem;
-        a {
-          background: #28564b;
-          border-radius: 1rem;
-          padding: 2px 15px;
-          width: 100%;
-          height: 100%;
-          display: block;
-          color: index.$white;
-          text-decoration: none;
-        }
-        .selected {
-          background: index.$main_clr;
-          color: index.$sub_clr;
-        }
-      }
     }
   }
   .filter-dropdown-btn {
@@ -395,7 +450,6 @@
 .swipe-btn-wrapper {
   width: 100%;
   position: relative;
-  bottom: 1rem;
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;
@@ -441,10 +495,10 @@
   }
   .counter-wrapper {
     position: absolute;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: index.$white;
-    right: 4.2rem;
-    top: -3rem;
+    right: 4.8rem;
+    top: -2rem;
   }
 }
 
@@ -600,7 +654,7 @@
     }
     margin: 1.2rem auto;
     .modal-name {
-      padding: 4rem 3rem 2rem 3rem;
+      padding: 2rem;
       font-size: 1.6rem;
       h1 {
         text-align: center;
@@ -616,10 +670,27 @@
         font-size: 2rem;
       }
     }
+    .modal-genre {
+      width: 100%;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 4rem;
+        li {
+          list-style: none;
+          font-size: 1.6rem;
+          background: index.$main_clr;
+          color: index.$sub_clr;
+          border-radius: 1rem;
+          padding: 2px 15px;
+        }
+      }
+    }
     .modal-seat {
       @extend %modal-border;
       p {
         color: index.$grey;
+        font-size: 1.1rem;
       }
     }
     .modal-price {

@@ -12,10 +12,48 @@
       <div class="city"></div>
       <div class="new-regist">
         <h1>新規登録</h1>
-        <div class="register-form"></div>
+        <div class="register-form">
+          <div class="register-field">
+            <h2>名前</h2>
+            <input type="text" placeholder="例)山田 花子">
+          </div>
+          <div class="register-field">
+            <h2>名前(カタカナ)</h2>
+            <input type="text" placeholder="例)ヤマダ ハナコ">
+          </div>
+          <div class="register-field">
+            <h2>性別</h2>
+            <div class="register-gender">
+              <button>男性</button>
+              <button>女性</button>
+              <button>その他</button>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>年齢</h2>
+            <div class="register-age">
+              <input type="number" id="age-field" min="0">
+              <p>歳</p>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>メーリアドレス</h2>
+            <input type="text" placeholder="例)apurimei@abc.ac.jp">
+          </div>
+          <div class="register-field">
+            <h2>パスワード</h2>
+            <input type="text" placeholder="apurimei112">
+          </div>
+          <div class="register-field">
+            <h2>パスワード(確認)</h2>
+            <input type="text" placeholder="apurimei112">
+          </div>
+          <div class="register-btn"><a href="#">送信</a></div>
+        </div>
       </div>
     </div>
     <script src="https://kit.fontawesome.com/f922c24c63.js" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
+    <script src="js/change.js"> </script>
   </body>
 </html>

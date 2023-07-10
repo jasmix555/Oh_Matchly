@@ -77,6 +77,7 @@ btn.addEventListener("click", (e) => {
       }
       toggle(ball, "active");
       toggle(capsule, "active");
+      toggle(capsules[index], "active"); // Toggle the specific capsule element
     });
   }
 });
