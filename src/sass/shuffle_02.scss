@@ -87,9 +87,11 @@
     color: #fff;
   }
   .bookedWrap {
-    position: absolute;
+    // display: none;
+    position: fixed;
     text-align: center;
     color: #fff;
+    transform: translateY(100%);
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -97,6 +99,11 @@
     height: 305px;
     border-radius: 10px 10px 0 0;
     background-color: index.$base_clr;
+    transition: 0.5s ease;
+    &.active {
+      // display: block;
+      transform: translateY(0);
+    }
     .bookHead {
       border-radius: 10px 10px 0 0;
 
@@ -122,6 +129,20 @@
     .tel {
       font-size: 2.4em;
       color: index.$main_clr;
+    }
+    .arrived {
+      border-radius: 10px;
+      display: block;
+      line-height: 38px;
+      margin-left: 55px;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.4em;
+      width: 280px;
+      height: 40px;
+      background-color: index.$sub_clr;
+      @extend %box-shdw;
     }
   }
 }

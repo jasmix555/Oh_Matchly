@@ -435,6 +435,10 @@ html {
   font-size: 10rem;
 }
 
+.wrapper .bookedWrap .arrived {
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
 .wrapper {
   position: relative;
   height: 744px;
@@ -520,9 +524,10 @@ html {
   color: #fff;
 }
 .wrapper .bookedWrap {
-  position: absolute;
+  position: fixed;
   text-align: center;
   color: #fff;
+  transform: translateY(100%);
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -530,6 +535,10 @@ html {
   height: 305px;
   border-radius: 10px 10px 0 0;
   background-color: #242f30;
+  transition: 0.5s ease;
+}
+.wrapper .bookedWrap.active {
+  transform: translateY(0);
 }
 .wrapper .bookedWrap .bookHead {
   border-radius: 10px 10px 0 0;
@@ -555,4 +564,17 @@ html {
 .wrapper .bookedWrap .tel {
   font-size: 2.4em;
   color: #fabc60;
+}
+.wrapper .bookedWrap .arrived {
+  border-radius: 10px;
+  display: block;
+  line-height: 38px;
+  margin-left: 55px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4em;
+  width: 280px;
+  height: 40px;
+  background-color: #2f6457;
 }

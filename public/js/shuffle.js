@@ -83,4 +83,10 @@ btn.addEventListener("click", (e) => {
 });
 
 const bookBtn = document.querySelector(`.book`);
-console.log(bookBtn);
+const bookedWrap = document.querySelector(`.bookedWrap`);
+console.log(bookedWrap);
+
+bookBtn.addEventListener("click", () => {
+  console.log("予約確定");
+  bookedWrap.classList.toggle("active");
+});
