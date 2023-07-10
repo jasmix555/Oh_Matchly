@@ -8,35 +8,36 @@ html(lang="ja")
       .main-bg
         .city
         .new-regist
-          h1 新規登録
+          h1 確認画面
+          a(href="newRegister.html").back-btn 戻る
           .register-form
             .register-field
               h2 名前
-              input(type="text" placeholder="例)山田 花子")
+              input(type="text" placeholder="例)山田 花子" value="神崎未希")
             .register-field
               h2 名前(カタカナ)
-              input(type="text" placeholder="例)ヤマダ ハナコ")
+              input(type="text" placeholder="例)ヤマダ ハナコ" value="カンザキミキ")
             .register-field
               h2 性別
               .register-gender
                 button 男性
-                button 女性
+                button.selected 女性
                 button その他
             .register-field
               h2 年齢
               .register-age
-                input(type="number" id="age-field" min="0")
+                input(type="number" id="age-field" min="0" value="20")
                 p 歳
             .register-field
               h2 メーリアドレス
-              input(type="text" placeholder="例)apurimei@abc.ac.jp")
+              input(type="text" placeholder="例)apurimei@abc.ac.jp" value="apurimei@abc.ac.jp")
             .register-field
               h2 パスワード
-              input(type="text" placeholder="apurimei112")
+              input(type="text" placeholder="apurimei112" value="apurimei112")
             .register-field
               h2 パスワード(確認)
-              input(type="text" placeholder="apurimei112")
+              input(type="text" placeholder="apurimei112" value="apurimei112")
             .register-btn
-              a(href="user_confirmation.html") 確認
+              a(href="#") 送信
       include _temp_p_foot
       script(src="js/change.js") 

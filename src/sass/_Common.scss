@@ -107,3 +107,22 @@ html {
     }
   }
 }
+
+.back-btn {
+  color: index.$main_clr;
+  font-size: 2rem;
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+  text-decoration: none;
+  text-align: center;
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f104";
+    font-size: 3rem;
+    position: relative;
+    top: 0.3rem;
+    padding-right: 0.2rem;
+  }
+}
