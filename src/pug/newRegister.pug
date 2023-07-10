@@ -25,10 +25,8 @@ html(lang="ja")
             .register-field
               h2 年齢
               .register-age
-                select(name='age')
-                  each i in Array.from({ length: 81 }, (_, index) => index + 1)
-                    option(value=i)= i
-                p 際
+                input(type="number" id="age-field" min="0")
+                p 歳
             .register-field
               h2 メーリアドレス
               input(type="text" placeholder="例)apurimei@abc.ac.jp")
@@ -39,6 +37,6 @@ html(lang="ja")
               h2 パスワード(確認)
               input(type="text" placeholder="apurimei112")
             .register-btn
-              a(href="#") 確認
+              a(href="#") 送信
       include _temp_p_foot
       script(src="js/change.js") 
