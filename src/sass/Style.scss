@@ -144,13 +144,14 @@
       align-items: center;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
+      gap: 1rem;
       overflow-x: scroll;
       .register-field {
         width: 80%;
         h2 {
           font-size: 1.4rem;
           color: index.$white;
-          padding: 1rem;
+          padding: 1rem 0;
           font-weight: 400;
         }
         input {
@@ -186,6 +187,7 @@
           }
         }
       }
+
       .register-gender {
         display: flex;
         gap: 1.2rem;
@@ -203,6 +205,7 @@
           color: index.$sub_clr;
         }
       }
+
       .register-btn {
         margin-top: 2.2rem;
         @extend %big-btn;
@@ -212,6 +215,67 @@
         button {
           line-height: 4rem;
         }
+      }
+
+      .register-time {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        p {
+          color: index.$white;
+          font-size: 1.8rem;
+        }
+        select {
+          width: 6rem;
+          height: 4rem;
+          border: solid 1px index.$field_brdr;
+          background: index.$field;
+          border-radius: 1rem;
+          font-size: 1.4rem;
+          color: index.$white;
+          outline: none;
+          text-align: center;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+
+      .register-holiday {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+
+        .days {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          select {
+            width: auto;
+            padding: 0 1rem;
+            height: 4rem;
+            border: solid 1px index.$field_brdr;
+            background: index.$field;
+            border-radius: 1rem;
+            font-size: 1.4rem;
+            color: index.$white;
+            outline: none;
+            text-align: center;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          p {
+            color: index.$white;
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .register-category {
+        @extend %filters;
       }
     }
   }

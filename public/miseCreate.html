@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>New Register</title>
+    <link rel="stylesheet" href="css/Style.css">
+  </head>
+  <body>
+    <div class="main-bg">
+      <div class="city"></div>
+      <div class="new-regist">
+        <h1>新規登録</h1>
+        <div class="register-form">
+          <div class="register-field">
+            <h2>店名</h2>
+            <input type="text" placeholder="例)ECCコンピュータ専門学校">
+          </div>
+          <div class="register-field">
+            <h2>名前(カタカナ)</h2>
+            <input type="text" placeholder="例)イーシーシーコンピュータセンモンガッコウ">
+          </div>
+          <div class="register-field">
+            <h2>営業時間</h2>
+            <div class="register-time">
+              <select name="hour" id="hour-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+              </select>
+              <p>:</p>
+              <select name="minute" id="minute-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
+              <p>~</p>
+              <select name="hour" id="hour-select2" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+              </select>
+              <p>:</p>
+              <select name="minute" id="minute-select2" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>定休日</h2>
+            <div class="register-holiday">
+              <div class="days">
+                <select id="day-select" name="japanese-day" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                  <option class="gray" value="0">定休日を選択する</option>
+                  <option value="月">月</option>
+                  <option value="火">火</option>
+                  <option value="水">水</option>
+                  <option value="木">木</option>
+                  <option value="金">金</option>
+                  <option value="土">土</option>
+                  <option value="日">日</option>
+                </select>
+                <p>曜日</p>
+              </div>
+              <input type="text" placeholder="曜日以外での定休日を採用されている方はこちらにご記入ください。">
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>食ジャンル</h2>
+            <div class="register-category">
+              <ul>
+                <li> 
+                  <button>海鮮系</button>
+                </li>
+                <li> 
+                  <button>中華系</button>
+                </li>
+                <li> 
+                  <button>和食系</button>
+                </li>
+                <li> 
+                  <button>鍋</button>
+                </li>
+                <li> 
+                  <button>粉物</button>
+                </li>
+                <li> 
+                  <button>韓国料理</button>
+                </li>
+                <li> 
+                  <button>肉</button>
+                </li>
+                <li> 
+                  <button>焼き鳥</button>
+                </li>
+                <li> 
+                  <button>揚げ物</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>お店の雰囲気</h2>
+            <div class="register-category">
+              <ul>
+                <li> 
+                  <button>静かな空間</button>
+                </li>
+                <li> 
+                  <button>賑やかな空間</button>
+                </li>
+                <li> 
+                  <button>おしゃれの空間</button>
+                </li>
+                <li> 
+                  <button>親しみやすい空間</button>
+                </li>
+                <li> 
+                  <button>レトロな空間</button>
+                </li>
+                <li> 
+                  <button>活気のある空間</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>座席</h2>
+            <div class="register-seat"></div>
+          </div>
+          <div class="register-btn"><a href="user_confirmation.html">確認</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/f922c24c63.js" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/change.js"> </script>
+    <script src="js/category.js"> </script>
+  </body>
+</html>

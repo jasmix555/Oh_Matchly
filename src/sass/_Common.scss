@@ -93,6 +93,7 @@ html {
       font-size: 1.4rem;
       button {
         background: #28564b;
+        border: solid 1px index.$field_brdr;
         border-radius: 1rem;
         padding: 2px 15px;
         width: 100%;

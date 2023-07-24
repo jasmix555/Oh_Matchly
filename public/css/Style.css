@@ -496,20 +496,21 @@ html {
   padding: 1rem;
 }
 
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul {
+.main-bg .new-regist .register-form .register-category ul, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul {
   margin-top: 5px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li {
+.main-bg .new-regist .register-form .register-category ul li, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul li {
   width: auto;
   height: auto;
   font-size: 1.4rem;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li button {
+.main-bg .new-regist .register-form .register-category ul li button, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul li button {
   background: #28564b;
+  border: solid 1px #408c71;
   border-radius: 1rem;
   padding: 2px 15px;
   width: 100%;
@@ -518,7 +519,7 @@ html {
   color: #f5f5f7;
   text-decoration: none;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li .selected {
+.main-bg .new-regist .register-form .register-category ul li .selected, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul li .selected {
   background: #fabc60;
   color: #2f6457;
 }
@@ -665,6 +666,7 @@ html {
   align-items: center;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  gap: 1rem;
   overflow-x: scroll;
 }
 .main-bg .new-regist .register-form .register-field {
@@ -673,7 +675,7 @@ html {
 .main-bg .new-regist .register-form .register-field h2 {
   font-size: 1.4rem;
   color: #f5f5f7;
-  padding: 1rem;
+  padding: 1rem 0;
   font-weight: 400;
 }
 .main-bg .new-regist .register-form .register-field input {
@@ -734,7 +736,60 @@ html {
 .main-bg .new-regist .register-form .register-btn button {
   line-height: 4rem;
 }
-
+.main-bg .new-regist .register-form .register-time {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-bg .new-regist .register-form .register-time p {
+  color: #f5f5f7;
+  font-size: 1.8rem;
+}
+.main-bg .new-regist .register-form .register-time select {
+  width: 6rem;
+  height: 4rem;
+  border: solid 1px #408c71;
+  background: #225144;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  color: #f5f5f7;
+  outline: none;
+  text-align: center;
+}
+.main-bg .new-regist .register-form .register-time select::-webkit-scrollbar {
+  display: none;
+}
+.main-bg .new-regist .register-form .register-holiday {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.main-bg .new-regist .register-form .register-holiday .days {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-bg .new-regist .register-form .register-holiday .days select {
+  width: auto;
+  padding: 0 1rem;
+  height: 4rem;
+  border: solid 1px #408c71;
+  background: #225144;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  color: #f5f5f7;
+  outline: none;
+  text-align: center;
+}
+.main-bg .new-regist .register-form .register-holiday .days select::-webkit-scrollbar {
+  display: none;
+}
+.main-bg .new-regist .register-form .register-holiday .days p {
+  color: #f5f5f7;
+  font-size: 1.8rem;
+}
 .login-page {
   position: relative;
 }

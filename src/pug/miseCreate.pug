@@ -1,0 +1,98 @@
+doctype html
+html(lang="ja")
+    head
+      include _temp_p_head
+      title New Register
+      link(rel="stylesheet", href="css/Style.css")
+    body
+      .main-bg
+        .city
+        .new-regist
+          h1 新規登録
+          .register-form
+            .register-field
+              h2 店名
+              input(type="text" placeholder="例)ECCコンピュータ専門学校")
+            .register-field
+              h2 名前(カタカナ)
+              input(type="text" placeholder="例)イーシーシーコンピュータセンモンガッコウ")
+            .register-field
+              h2 営業時間
+              .register-time
+                select(name="hour" id="hour-select" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
+                  - for (let i = 0; i <= 23; i++)
+                    option(value=i class="selectedHour" === i ? 'selected' : '') #{String(i).padStart(2, '0')}
+                p :
+                select(name="minute" id="minute-select" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
+                  - for (let i = 0; i <= 59; i+= 10)
+                    option(value=i class="selectedMinute" === i ? 'selected' : '') #{String(i).padStart(2, '0')}
+                p ~
+                select(name="hour" id="hour-select2" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
+                  - for (let i = 0; i <= 23; i++)
+                    option(value=i class=selectedHour2 === i ? 'selected' : '') #{String(i).padStart(2, '0')}
+                p :
+                select(name="minute" id="minute-select2" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
+                  - for (let i = 0; i <= 59; i+= 10)
+                    option(value=i class="selectedMinute2" === i ? "selected" : '') #{String(i).padStart(2, '0')}
+            .register-field
+              h2 定休日
+              .register-holiday
+                .days
+                  select#day-select(name="japanese-day" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
+                    option(value="0" class="gray") 定休日を選択する
+                    option(value="月") 月
+                    option(value="火") 火
+                    option(value="水") 水
+                    option(value="木") 木
+                    option(value="金") 金
+                    option(value="土") 土
+                    option(value="日") 日
+                  p 曜日
+                input(type="text" placeholder="曜日以外での定休日を採用されている方はこちらにご記入ください。")
+            .register-field
+              h2 食ジャンル
+              .register-category
+                ul
+                  li 
+                    button 海鮮系
+                  li 
+                    button 中華系
+                  li 
+                    button 和食系
+                  li 
+                    button 鍋
+                  li 
+                    button 粉物
+                  li 
+                    button 韓国料理
+                  li 
+                    button 肉
+                  li 
+                    button 焼き鳥
+                  li 
+                    button 揚げ物
+            .register-field
+              h2 お店の雰囲気
+              .register-category
+                ul
+                  li 
+                    button 静かな空間
+                  li 
+                    button 賑やかな空間
+                  li 
+                    button おしゃれの空間
+                  li 
+                    button 親しみやすい空間
+                  li 
+                    button レトロな空間
+                  li 
+                    button 活気のある空間
+            .register-field
+              h2 座席
+              .register-seat
+                
+            .register-btn
+              a(href="user_confirmation.html") 確認
+      include _temp_p_foot
+      script(src="js/change.js") 
+      script(src="js/category.js") 
