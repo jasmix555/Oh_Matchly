@@ -277,6 +277,30 @@
       .register-category {
         @extend %filters;
       }
+      .register-seat-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .register-seat {
+          display: flex;
+          justify-content: space-between;
+          .seat-content {
+            .seat-inner {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              input {
+                width: 65px;
+                height: 40px;
+              }
+              p {
+                font-size: 1.4rem;
+                color: index.$white;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -790,6 +790,29 @@ html {
   color: #f5f5f7;
   font-size: 1.8rem;
 }
+.main-bg .new-regist .register-form .register-seat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat {
+  display: flex;
+  justify-content: space-between;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner input {
+  width: 65px;
+  height: 40px;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner p {
+  font-size: 1.4rem;
+  color: #f5f5f7;
+}
+
 .login-page {
   position: relative;
 }

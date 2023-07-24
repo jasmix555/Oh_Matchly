@@ -89,8 +89,32 @@ html(lang="ja")
                     button 活気のある空間
             .register-field
               h2 座席
-              .register-seat
-                
+              .register-seat-wrapper
+                .register-seat
+                  .seat-content
+                    h2 テーブル
+                    .seat-inner
+                      input(type="number" id="age-field" min="0")
+                      p 卓
+                  .seat-content
+                    h2 カウンター
+                    .seat-inner
+                      input(type="number" id="age-field" min="0")
+                      p 席
+                  .seat-content
+                    h2 お座敷
+                    .seat-inner
+                      input(type="number" id="age-field" min="0")
+                      p 部屋
+                input(type="text" placeholder="お席のことで他になにかございましたらこちらにご記入ください。")
+            .register-field
+              h2 喫煙の有無
+              .register-category
+                ul
+                  li
+                    button 禁煙
+                  li
+                    button 喫煙可能
             .register-btn
               a(href="user_confirmation.html") 確認
       include _temp_p_foot
