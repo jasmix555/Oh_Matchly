@@ -47,7 +47,8 @@ html {
   background: index.$main_clr;
   text-align: center;
   z-index: 5;
-  a {
+  a,
+  button {
     color: index.$sub_clr;
     height: inherit;
     width: inherit;

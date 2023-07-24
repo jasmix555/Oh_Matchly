@@ -463,7 +463,14 @@ html {
   text-align: center;
   z-index: 5;
 }
-.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .main-bg .selection-btn-wrapper .selection-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject a, .main-bg .new-regist .register-form .register-btn a, .login-page .login-form .login a {
+.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .main-bg .selection-btn-wrapper .selection-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject a, .main-bg .new-regist .register-form .register-btn a, .login-page .login-form .login a,
+.main-bg .login-btn-wrapper .login button,
+.main-bg .login-btn-wrapper .register button,
+.main-bg .selection-btn-wrapper .selection-btn button,
+.main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn button,
+.main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject button,
+.main-bg .new-regist .register-form .register-btn button,
+.login-page .login-form .login button {
   color: #2f6457;
   height: inherit;
   width: inherit;
@@ -724,7 +731,7 @@ html {
   width: 9rem;
   height: 4rem;
 }
-.main-bg .new-regist .register-form .register-btn a {
+.main-bg .new-regist .register-form .register-btn button {
   line-height: 4rem;
 }
 
