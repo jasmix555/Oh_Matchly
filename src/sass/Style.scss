@@ -1,5 +1,6 @@
 @use "Asset" as asset;
 @use "Index" as index;
+@use "Common" as *;
 
 //特徴や一人だけで実行するコードはここで書く
 .main-bg {
@@ -133,20 +134,7 @@
       line-height: 18rem;
     }
     .register-form {
-      position: fixed;
-      bottom: 0;
-      padding-top: 2rem;
-      padding-bottom: 6rem;
-      background: index.$sub_clr;
-      width: 100%;
-      height: 80%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-      gap: 1rem;
-      overflow-x: scroll;
+      @include regist-form();
       .register-field {
         width: 80%;
         h2 {
@@ -440,7 +428,7 @@
         }
       }
 
-      .price {
+      .regiprice {
         select {
           width: 40%;
         }
@@ -457,6 +445,42 @@
         }
       }
     }
+  }
+  .subscription-wrapper {
+    h1,
+    p {
+      text-align: center;
+      color: #ddfffb;
+      font-size: 2.4rem;
+      font-weight: 800;
+    }
+    h1 {
+      padding-top: 8rem;
+      padding-bottom: 2.4rem;
+    }
+    p {
+      padding-bottom: 1rem;
+    }
+    .subsc-price {
+      margin: 0 auto;
+      display: flex;
+      width: 64%;
+      align-items: center;
+      .price {
+        flex-grow: 1;
+        align-items: center;
+        display: flex;
+        &::before {
+          content: "";
+          border-bottom: 5px dotted #ddfffb;
+          flex: 1;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  .subsc-form {
+    @include regist-form(70%);
   }
 }
 

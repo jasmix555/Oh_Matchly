@@ -147,7 +147,7 @@ html(lang="ja")
                 textarea(id="memo" type="text" placeholder="駅からの距離をご記入ください。\n例)大阪梅田駅から徒歩5分")
             .register-field
               h2 1人あたりの平均価格
-              .register-num.register-time.price
+              .register-num.register-time.regist-price
                 select(name="hour" id="hour-select" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
                   - for (let i = 1000; i <= 10000; i+= 1000)
                     option(value=i class="selectedHour" === i ? 'selected' : '') #{String(i).padStart(2, '0')}
