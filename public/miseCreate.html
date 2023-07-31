@@ -113,7 +113,8 @@
                 </select>
                 <p>曜日</p>
               </div>
-              <input type="text" placeholder="曜日以外での定休日を採用されている方はこちらにご記入ください。">
+              <textarea id="memo" type="text" placeholder="曜日以外での定休日を採用されている方は
+こちらにご記入ください。"></textarea>
             </div>
           </div>
           <div class="register-field">
@@ -201,7 +202,8 @@
                   </div>
                 </div>
               </div>
-              <input type="text" placeholder="お席のことで他になにかございましたらこちらにご記入ください。">
+              <textarea id="memo" type="text" placeholder="お席のことで他になにかございましたら
+こちらにご記入ください。"></textarea>
             </div>
           </div>
           <div class="register-field">
@@ -246,18 +248,83 @@
             <h2>住所</h2>
             <p>大阪府 大阪市 北区
               <div class="register-location">
-                <div class="prefecture"></div>
+                <div class="prefecture">
+                  <input type="text" value="梅田" disabled>
+                </div>
                 <div class="street">
                   <input type="number" id="seat-num" min="0">
                   <p>丁目</p>
                 </div>
-                <div class="street-num">
-                  <input type="number" id="seat-num" min="0">
+                <div class="block">
+                  <input type="text" id="seat-num" placeholder="２番地３号">
                 </div>
               </div>
+              <textarea id="memo" type="text" placeholder="駅からの距離をご記入ください。
+例)大阪梅田駅から徒歩5分"></textarea>
             </p>
           </div>
-          <div class="register-btn"><a href="user_confirmation.html">確認</a></div>
+          <div class="register-field">
+            <h2>1人あたりの平均価格</h2>
+            <div class="register-num register-time price">
+              <select name="hour" id="hour-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="1000">1000</option>
+                <option value="2000">2000</option>
+                <option value="3000">3000</option>
+                <option value="4000">4000</option>
+                <option value="5000">5000</option>
+                <option value="6000">6000</option>
+                <option value="7000">7000</option>
+                <option value="8000">8000</option>
+                <option value="9000">9000</option>
+                <option value="10000">10000</option>
+              </select>
+              <p>円</p>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>お支払い方法</h2>
+            <div class="register-payment">
+              <div class="payment">
+                <input type="checkbox" id="payment1">
+                <label for="payment1">現金</label>
+              </div>
+              <div class="payment">
+                <input type="checkbox" id="payment2">
+                <label for="payment2">クレジットカード</label>
+              </div>
+              <div class="payment">
+                <input type="checkbox" id="payment3">
+                <label for="payment3">QRコード</label>
+              </div>
+              <div class="payment">
+                <input type="checkbox" id="payment4">
+                <label for="payment4">交通系・電子マネー</label>
+              </div>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>電話番号</h2>
+            <input type="number" placeholder="例)06-6779-8484">
+          </div>
+          <div class="register-field">
+            <h2>メールアドレス</h2>
+            <input type="email" placeholder="例)apurimei@abc.ac.jp">
+          </div>
+          <div class="register-field">
+            <h2>パスワード</h2>
+            <div class="password-wrapper">
+              <input type="password" name="password" placeholder="パスワード" id="text_password">
+              <button class="fa-solid fa-eye-slash" id="toggle_password"></button>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>パスワード（確認）</h2>
+            <div class="password-wrapper">
+              <input type="password" name="password" placeholder="パスワード" id="text_password">
+              <button class="fa-solid fa-eye-slash" id="toggle_password"></button>
+            </div>
+          </div>
+          <div class="register-btn"><a href="subscription.html">確認</a></div>
         </div>
       </div>
     </div>
@@ -266,5 +333,6 @@
     <script src="js/change.js"> </script>
     <script src="js/category.js"></script>
     <script src="js/upload.js"> </script>
+    <script src="js/password.js"> </script>
   </body>
 </html>

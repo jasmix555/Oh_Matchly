@@ -48,7 +48,7 @@ html(lang="ja")
                     option(value="土") 土
                     option(value="日") 日
                   p 曜日
-                input(type="text" placeholder="曜日以外での定休日を採用されている方はこちらにご記入ください。")
+                textarea(id="memo" type="text" placeholder="曜日以外での定休日を採用されている方は\nこちらにご記入ください。")
             .register-field
               h2 食ジャンル
               .register-category
@@ -106,7 +106,7 @@ html(lang="ja")
                     .seat-inner
                       input(type="number" id="seat-num" min="0")
                       p 部屋
-                input(type="text" placeholder="お席のことで他になにかございましたらこちらにご記入ください。")
+                textarea(id="memo" type="text" placeholder="お席のことで他になにかございましたら\nこちらにご記入ください。")
             .register-field
               h2 喫煙の有無
               .register-category
@@ -138,14 +138,55 @@ html(lang="ja")
               p 大阪府 大阪市 北区
                 .register-location
                   .prefecture
+                    input(type="text" value="梅田" disabled)
                   .street
                     input(type="number" id="seat-num" min="0")
                     p 丁目
-                  .street-num
-                    input(type="number" id="seat-num" min="0")
+                  .block
+                    input(type="text" id="seat-num" placeholder="２番地３号")
+                textarea(id="memo" type="text" placeholder="駅からの距離をご記入ください。\n例)大阪梅田駅から徒歩5分")
+            .register-field
+              h2 1人あたりの平均価格
+              .register-num.register-time.price
+                select(name="hour" id="hour-select" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
+                  - for (let i = 1000; i <= 10000; i+= 1000)
+                    option(value=i class="selectedHour" === i ? 'selected' : '') #{String(i).padStart(2, '0')}
+                p 円
+            .register-field
+              h2 お支払い方法
+              .register-payment
+                .payment
+                  input(type="checkbox" id="payment1") 
+                  label(for="payment1") 現金
+                .payment
+                  input(type="checkbox" id="payment2") 
+                  label(for="payment2") クレジットカード
+                .payment
+                  input(type="checkbox" id="payment3") 
+                  label(for="payment3") QRコード
+                .payment
+                  input(type="checkbox" id="payment4") 
+                  label(for="payment4") 交通系・電子マネー
+            .register-field
+              h2 電話番号
+              input(type="number" placeholder="例)06-6779-8484")
+            .register-field
+              h2 メールアドレス
+              input(type="email" placeholder="例)apurimei@abc.ac.jp")
+            .register-field
+              h2 パスワード
+              .password-wrapper
+                input(type="password" name="password" placeholder="パスワード")#text_password
+                button#toggle_password.fa-solid.fa-eye-slash
+            .register-field
+              h2 パスワード（確認）
+              .password-wrapper
+                input(type="password" name="password" placeholder="パスワード")#text_password
+                button#toggle_password.fa-solid.fa-eye-slash
             .register-btn
-              a(href="user_confirmation.html") 確認
+              a(href="subscription.html") 確認
       include _temp_p_foot
       script(src="js/change.js") 
       script(src="js/category.js")
       script(src="js/upload.js") 
+      script(src="js/password.js") 
