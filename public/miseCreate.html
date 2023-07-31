@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>New Register</title>
+    <link rel="stylesheet" href="css/Style.css">
+  </head>
+  <body>
+    <div class="main-bg">
+      <div class="city"></div>
+      <div class="new-regist">
+        <h1>新規登録</h1>
+        <div class="register-form">
+          <div class="register-field">
+            <h2>店名</h2>
+            <input type="text" placeholder="例)ECCコンピュータ専門学校">
+          </div>
+          <div class="register-field">
+            <h2>名前(カタカナ)</h2>
+            <input type="text" placeholder="例)イーシーシーコンピュータセンモンガッコウ">
+          </div>
+          <div class="register-field">
+            <h2>営業時間</h2>
+            <div class="register-num register-time">
+              <select name="hour" id="hour-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+              </select>
+              <p>:</p>
+              <select name="minute" id="minute-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
+              <p>~</p>
+              <select name="hour" id="hour-select2" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+              </select>
+              <p>:</p>
+              <select name="minute" id="minute-select2" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="0">00</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>定休日</h2>
+            <div class="register-holiday">
+              <div class="days">
+                <select id="day-select" name="japanese-day" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                  <option class="gray" value="0">定休日を選択する</option>
+                  <option value="月">月</option>
+                  <option value="火">火</option>
+                  <option value="水">水</option>
+                  <option value="木">木</option>
+                  <option value="金">金</option>
+                  <option value="土">土</option>
+                  <option value="日">日</option>
+                </select>
+                <p>曜日</p>
+              </div>
+              <textarea id="memo" type="text" placeholder="曜日以外での定休日を採用されている方は
+こちらにご記入ください。"></textarea>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>食ジャンル</h2>
+            <div class="register-category">
+              <ul>
+                <li> 
+                  <button>海鮮系</button>
+                </li>
+                <li> 
+                  <button>中華系</button>
+                </li>
+                <li> 
+                  <button>和食系</button>
+                </li>
+                <li> 
+                  <button>鍋</button>
+                </li>
+                <li> 
+                  <button>粉物</button>
+                </li>
+                <li> 
+                  <button>韓国料理</button>
+                </li>
+                <li> 
+                  <button>肉</button>
+                </li>
+                <li> 
+                  <button>焼き鳥</button>
+                </li>
+                <li> 
+                  <button>揚げ物</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>お店の雰囲気</h2>
+            <div class="register-category">
+              <ul>
+                <li> 
+                  <button>静かな空間</button>
+                </li>
+                <li> 
+                  <button>賑やかな空間</button>
+                </li>
+                <li> 
+                  <button>おしゃれの空間</button>
+                </li>
+                <li> 
+                  <button>親しみやすい空間</button>
+                </li>
+                <li> 
+                  <button>レトロな空間</button>
+                </li>
+                <li> 
+                  <button>活気のある空間</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>座席</h2>
+            <div class="register-seat-wrapper">
+              <div class="register-seat">
+                <div class="seat-content">
+                  <h2>テーブル</h2>
+                  <div class="seat-inner">
+                    <input type="number" id="seat-num" min="0">
+                    <p>卓</p>
+                  </div>
+                </div>
+                <div class="seat-content">
+                  <h2>カウンター</h2>
+                  <div class="seat-inner">
+                    <input type="number" id="seat-num" min="0">
+                    <p>席</p>
+                  </div>
+                </div>
+                <div class="seat-content">
+                  <h2>お座敷</h2>
+                  <div class="seat-inner">
+                    <input type="number" id="seat-num" min="0">
+                    <p>部屋</p>
+                  </div>
+                </div>
+              </div>
+              <textarea id="memo" type="text" placeholder="お席のことで他になにかございましたら
+こちらにご記入ください。"></textarea>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>喫煙の有無</h2>
+            <div class="register-category">
+              <ul>
+                <li>
+                  <button>禁煙</button>
+                </li>
+                <li>
+                  <button>喫煙可能</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>お店の写真</h2>
+            <p>
+               店の外装・内装・メニュー表・料理の4枚の写真をアップロード
+              してください
+              <div class="upload-container">
+                <div class="container" id="imgBox1">
+                  <input type="file" accept="image/*" name="image" id="file1" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file1"></label>
+                </div>
+                <div class="container" id="imgBox2">
+                  <input type="file" accept="image/*" name="image" id="file2" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file2"></label>
+                </div>
+                <div class="container" id="imgBox3">
+                  <input type="file" accept="image/*" name="image" id="file3" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file3"></label>
+                </div>
+                <div class="container" id="imgBox4">
+                  <input type="file" accept="image/*" name="image" id="file4" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file4"></label>
+                </div>
+              </div>
+            </p>
+          </div>
+          <div class="register-field">
+            <h2>住所</h2>
+            <p>大阪府 大阪市 北区
+              <div class="register-location">
+                <div class="prefecture">
+                  <input type="text" value="梅田" disabled>
+                </div>
+                <div class="street">
+                  <input type="number" id="seat-num" min="0">
+                  <p>丁目</p>
+                </div>
+                <div class="block">
+                  <input type="text" id="seat-num" placeholder="２番地３号">
+                </div>
+              </div>
+              <textarea id="memo" type="text" placeholder="駅からの距離をご記入ください。
+例)大阪梅田駅から徒歩5分"></textarea>
+            </p>
+          </div>
+          <div class="register-field">
+            <h2>1人あたりの平均価格</h2>
+            <div class="register-num register-time regist-price">
+              <select name="hour" id="hour-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
+                <option value="1000">1000</option>
+                <option value="2000">2000</option>
+                <option value="3000">3000</option>
+                <option value="4000">4000</option>
+                <option value="5000">5000</option>
+                <option value="6000">6000</option>
+                <option value="7000">7000</option>
+                <option value="8000">8000</option>
+                <option value="9000">9000</option>
+                <option value="10000">10000</option>
+              </select>
+              <p>円</p>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>お支払い方法</h2>
+            <div class="register-payment">
+              <div class="payment">
+                <input type="checkbox" id="payment1">
+                <label for="payment1">現金</label>
+              </div>
+              <div class="payment">
+                <input type="checkbox" id="payment2">
+                <label for="payment2">クレジットカード</label>
+              </div>
+              <div class="payment">
+                <input type="checkbox" id="payment3">
+                <label for="payment3">QRコード</label>
+              </div>
+              <div class="payment">
+                <input type="checkbox" id="payment4">
+                <label for="payment4">交通系・電子マネー</label>
+              </div>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>電話番号</h2>
+            <input type="number" placeholder="例)06-6779-8484">
+          </div>
+          <div class="register-field">
+            <h2>メールアドレス</h2>
+            <input type="email" placeholder="例)apurimei@abc.ac.jp">
+          </div>
+          <div class="register-field">
+            <h2>パスワード</h2>
+            <div class="password-wrapper">
+              <input type="password" name="password" placeholder="パスワード" id="text_password">
+              <button class="fa-solid fa-eye-slash" id="toggle_password"></button>
+            </div>
+          </div>
+          <div class="register-field">
+            <h2>パスワード（確認）</h2>
+            <div class="password-wrapper">
+              <input type="password" name="password" placeholder="パスワード" id="text_password">
+              <button class="fa-solid fa-eye-slash" id="toggle_password"></button>
+            </div>
+          </div>
+          <div class="register-btn"><a href="subscription.html">確認</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/f922c24c63.js" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/change.js"> </script>
+    <script src="js/category.js"></script>
+    <script src="js/upload.js"> </script>
+    <script src="js/password.js"> </script>
+  </body>
+</html>

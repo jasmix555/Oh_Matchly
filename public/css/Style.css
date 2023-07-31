@@ -496,20 +496,21 @@ html {
   padding: 1rem;
 }
 
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul {
+.main-bg .new-regist .register-form .register-category ul, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul {
   margin-top: 5px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li {
+.main-bg .new-regist .register-form .register-category ul li, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul li {
   width: auto;
   height: auto;
   font-size: 1.4rem;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li button {
+.main-bg .new-regist .register-form .register-category ul li button, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul li button {
   background: #28564b;
+  border: solid 1px #408c71;
   border-radius: 1rem;
   padding: 2px 15px;
   width: 100%;
@@ -518,7 +519,7 @@ html {
   color: #f5f5f7;
   text-decoration: none;
 }
-.filter-dropdown-wrapper .filter-dropdown .filter-genre ul li .selected {
+.main-bg .new-regist .register-form .register-category ul li .selected, .filter-dropdown-wrapper .filter-dropdown .filter-genre ul li .selected {
   background: #fabc60;
   color: #2f6457;
 }
@@ -656,6 +657,7 @@ html {
 .main-bg .new-regist .register-form {
   position: fixed;
   bottom: 0;
+  padding-top: 2rem;
   padding-bottom: 6rem;
   background: #2f6457;
   width: 100%;
@@ -665,6 +667,7 @@ html {
   align-items: center;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  gap: 1rem;
   overflow-x: scroll;
 }
 .main-bg .new-regist .register-form .register-field {
@@ -673,12 +676,35 @@ html {
 .main-bg .new-regist .register-form .register-field h2 {
   font-size: 1.4rem;
   color: #f5f5f7;
-  padding: 1rem;
+  padding: 0.6rem 0 0.8rem 0;
   font-weight: 400;
+}
+.main-bg .new-regist .register-form .register-field p {
+  font-size: 1.2rem;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.main-bg .new-regist .register-form .register-field textarea {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 1.4rem 0 1.4rem 2rem;
+  background: #225144;
+  border: solid 1px #408c71;
+  color: #f5f5f7;
+  outline: none;
+  resize: none;
+}
+.main-bg .new-regist .register-form .register-field textarea:-ms-input-placeholder {
+  color: #629693;
+}
+.main-bg .new-regist .register-form .register-field textarea::placeholder {
+  color: #629693;
 }
 .main-bg .new-regist .register-form .register-field input {
   width: 100%;
-  height: 4rem;
   font-size: 1.4rem;
   border-radius: 1rem;
   padding: 1.4rem 0 1.4rem 2rem;
@@ -693,20 +719,26 @@ html {
 .main-bg .new-regist .register-form .register-field input::placeholder {
   color: #629693;
 }
-.main-bg .new-regist .register-form .register-field .register-age {
+.main-bg .new-regist .register-form .register-field input#memo {
+  border: solid 1px tomato;
+}
+.main-bg .new-regist .register-form .register-field input::-webkit-inner-spin-button {
+  display: none;
+}
+.main-bg .new-regist .register-form .register-field .register-num {
   display: flex;
   align-items: center;
   position: relative;
 }
-.main-bg .new-regist .register-form .register-field .register-age input::-webkit-inner-spin-button {
+.main-bg .new-regist .register-form .register-field .register-num input::-webkit-inner-spin-button {
   display: none;
 }
-.main-bg .new-regist .register-form .register-field .register-age p {
+.main-bg .new-regist .register-form .register-field .register-num p {
   color: #f5f5f7;
   font-size: 1.6rem;
   padding: 1rem;
 }
-.main-bg .new-regist .register-form .register-field .register-age #age-field {
+.main-bg .new-regist .register-form .register-field .register-num #age-field {
   width: 20%;
 }
 .main-bg .new-regist .register-form .register-gender {
@@ -733,6 +765,242 @@ html {
 }
 .main-bg .new-regist .register-form .register-btn button {
   line-height: 4rem;
+}
+.main-bg .new-regist .register-form .register-time {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-bg .new-regist .register-form .register-time p {
+  color: #f5f5f7;
+  font-size: 1.8rem;
+}
+.main-bg .new-regist .register-form .register-time select {
+  width: 6rem;
+  height: 4rem;
+  border: solid 1px #408c71;
+  background: #225144;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  color: #f5f5f7;
+  outline: none;
+  text-align: center;
+}
+.main-bg .new-regist .register-form .register-time select::-webkit-scrollbar {
+  display: none;
+}
+.main-bg .new-regist .register-form .register-holiday {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.main-bg .new-regist .register-form .register-holiday .days {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-bg .new-regist .register-form .register-holiday .days select {
+  width: auto;
+  padding: 0 1rem;
+  height: 4rem;
+  border: solid 1px #408c71;
+  background: #225144;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  color: #f5f5f7;
+  outline: none;
+  text-align: center;
+}
+.main-bg .new-regist .register-form .register-holiday .days select::-webkit-scrollbar {
+  display: none;
+}
+.main-bg .new-regist .register-form .register-holiday .days p {
+  color: #f5f5f7;
+  font-size: 1.8rem;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat {
+  display: flex;
+  justify-content: space-between;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner input {
+  padding: 0;
+  width: 65px;
+  height: 40px;
+  text-align: center;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner input::-webkit-inner-spin-button {
+  display: none;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner p {
+  font-size: 1.4rem;
+  color: #f5f5f7;
+}
+.main-bg .new-regist .register-form .upload-container {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+.main-bg .new-regist .register-form .upload-container .container {
+  width: 144px;
+  height: 211px;
+  border-radius: 1rem;
+  background: #225144;
+  border: 1px solid #408c71;
+  background-size: cover;
+  background-position: center;
+}
+.main-bg .new-regist .register-form .upload-container .container .fa-plus {
+  top: 44%;
+  left: 52%;
+  transform: translateX(-50%);
+  position: relative;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  color: #225144;
+  background: #fabc60;
+  cursor: pointer;
+  font-weight: 2000;
+}
+.main-bg .new-regist .register-form .register-location {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+.main-bg .new-regist .register-form .register-location .prefecture input {
+  width: 80%;
+  text-align: center;
+  padding: 1.4rem 0;
+}
+.main-bg .new-regist .register-form .register-location .street {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.main-bg .new-regist .register-form .register-location .street p {
+  padding: 0;
+}
+.main-bg .new-regist .register-form .register-location .street input {
+  width: 50%;
+}
+.main-bg .new-regist .register-form .register-location .block input {
+  padding: 1.4rem 0 1.4rem 1.2rem;
+}
+.main-bg .new-regist .register-form .register-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main-bg .new-regist .register-form .register-payment .payment {
+  line-height: 2.7rem;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 1em auto;
+  color: #f5f5f7;
+  gap: 2rem;
+}
+.main-bg .new-regist .register-form .register-payment .payment input[type=checkbox] {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: #225144;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 3.2rem;
+  height: 3rem;
+  border: 2px solid #408c71;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.main-bg .new-regist .register-form .register-payment .payment input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+.main-bg .new-regist .register-form .register-payment .payment input[type=checkbox]::before {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  position: relative;
+  right: 61%;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 4rem 4rem #fabc60;
+}
+.main-bg .new-regist .register-form .regiprice select {
+  width: 40%;
+}
+.main-bg .new-regist .register-form .password-wrapper {
+  display: flex;
+  align-items: center;
+}
+.main-bg .new-regist .register-form .password-wrapper button {
+  position: absolute;
+  right: 5rem;
+  color: #fabc60;
+  font-size: 1.6rem;
+}
+.main-bg .subscription-wrapper h1,
+.main-bg .subscription-wrapper p {
+  text-align: center;
+  color: #ddfffb;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.main-bg .subscription-wrapper h1 {
+  padding-top: 8rem;
+  padding-bottom: 2.4rem;
+}
+.main-bg .subscription-wrapper p {
+  padding-bottom: 1rem;
+}
+.main-bg .subscription-wrapper .subsc-price {
+  margin: 0 auto;
+  display: flex;
+  width: 64%;
+  align-items: center;
+}
+.main-bg .subscription-wrapper .subsc-price .price {
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+}
+.main-bg .subscription-wrapper .subsc-price .price::before {
+  content: "";
+  border-bottom: 5px dotted #ddfffb;
+  flex: 1;
+  margin: 0 10px;
+}
+.main-bg .subsc-form {
+  position: fixed;
+  bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  background: #2f6457;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  gap: 1rem;
+  overflow-x: scroll;
 }
 
 .login-page {

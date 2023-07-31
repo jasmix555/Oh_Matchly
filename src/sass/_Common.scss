@@ -93,6 +93,7 @@ html {
       font-size: 1.4rem;
       button {
         background: #28564b;
+        border: solid 1px index.$field_brdr;
         border-radius: 1rem;
         padding: 2px 15px;
         width: 100%;
@@ -126,4 +127,21 @@ html {
     top: 0.3rem;
     padding-right: 0.2rem;
   }
+}
+
+@mixin regist-form($h: 80%) {
+  position: fixed;
+  bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  background: index.$sub_clr;
+  width: 100%;
+  height: $h;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  gap: 1rem;
+  overflow-x: scroll;
 }
