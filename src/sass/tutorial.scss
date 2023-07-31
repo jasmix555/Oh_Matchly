@@ -1,0 +1,66 @@
+@use "Asset" as asset;
+@use "Index" as index;
+
+.slideWrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid #fff;
+  &.show {
+    transition: ease-in-out 1s;
+    opacity: 1;
+  }
+
+  li {
+    width: 100%;
+    height: 100%;
+    display: none;
+    &:first-child {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .bal {
+      position: absolute;
+      width: 324px;
+      height: 72px;
+      top: 624px;
+      left: 33px;
+      display: flex;
+      justify-content: center;
+
+      background-image: url("../img/miki/balBg.png");
+      background-size: cover;
+      animation: fuwa 2s infinite;
+      p {
+        display: block;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 60px;
+        font-weight: bold;
+        font-size: 1.6em;
+        color: index.$sub_clr;
+      }
+    }
+  }
+}
+
+@keyframes fuwa {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
