@@ -129,6 +129,75 @@ html {
   }
 }
 
+.register-field {
+  width: 80%;
+  h2 {
+    font-size: 1.4rem;
+    color: index.$white;
+    padding: 0.6rem 0 0.8rem 0;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1.2rem;
+    color: index.$white;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+  textarea {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    padding: 1.4rem 0 1.4rem 2rem;
+    background: index.$field;
+    border: solid 1px index.$field_brdr;
+    color: index.$white;
+    outline: none;
+    resize: none;
+    &::placeholder {
+      color: index.$field_clr;
+    }
+  }
+  input {
+    width: 100%;
+    // height: 4rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    padding: 1.4rem 0 1.4rem 2rem;
+    background: index.$field;
+    border: solid 1px index.$field_brdr;
+    color: index.$white;
+    outline: none;
+    &::placeholder {
+      color: index.$field_clr;
+    }
+    &#memo {
+      border: solid 1px tomato;
+    }
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+  .register-num {
+    display: flex;
+    align-items: center;
+    position: relative;
+    input {
+      &::-webkit-inner-spin-button {
+        display: none;
+      }
+    }
+    p {
+      color: index.$white;
+      font-size: 1.6rem;
+      padding: 1rem;
+    }
+    #age-field {
+      width: 20%;
+    }
+  }
+}
+
 @mixin regist-form($h: 80%) {
   position: fixed;
   bottom: 0;

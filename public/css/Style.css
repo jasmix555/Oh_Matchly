@@ -439,7 +439,7 @@ html {
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
-.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .main-bg .selection-btn-wrapper .selection-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject, .main-bg .new-regist .register-form .register-btn, .login-page .login-form .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
+.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .main-bg .selection-btn-wrapper .selection-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject, .main-bg .register-btn, .login-page .login-form .login, .filter-dropdown-wrapper .filter-dropdown-btn button {
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -455,7 +455,7 @@ html {
   margin: 0 auto;
 }
 
-.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .main-bg .selection-btn-wrapper .selection-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject, .main-bg .new-regist .register-form .register-btn, .login-page .login-form .login {
+.main-bg .login-btn-wrapper .login, .main-bg .login-btn-wrapper .register, .main-bg .selection-btn-wrapper .selection-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject, .main-bg .register-btn, .login-page .login-form .login {
   width: 20.5rem;
   height: 5rem;
   border-radius: 1rem;
@@ -463,13 +463,13 @@ html {
   text-align: center;
   z-index: 5;
 }
-.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .main-bg .selection-btn-wrapper .selection-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject a, .main-bg .new-regist .register-form .register-btn a, .login-page .login-form .login a,
+.main-bg .login-btn-wrapper .login a, .main-bg .login-btn-wrapper .register a, .main-bg .selection-btn-wrapper .selection-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn a, .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject a, .main-bg .register-btn a, .login-page .login-form .login a,
 .main-bg .login-btn-wrapper .login button,
 .main-bg .login-btn-wrapper .register button,
 .main-bg .selection-btn-wrapper .selection-btn button,
 .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .age-confirm-btn button,
 .main-bg .age-confirm-wrapper .age-confirm-btn-wrapper .reject button,
-.main-bg .new-regist .register-form .register-btn button,
+.main-bg .register-btn button,
 .login-page .login-form .login button {
   color: #2f6457;
   height: inherit;
@@ -541,6 +541,78 @@ html {
   position: relative;
   top: 0.3rem;
   padding-right: 0.2rem;
+}
+
+.register-field {
+  width: 80%;
+}
+.register-field h2 {
+  font-size: 1.4rem;
+  color: #f5f5f7;
+  padding: 0.6rem 0 0.8rem 0;
+  font-weight: 400;
+}
+.register-field p {
+  font-size: 1.2rem;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.register-field textarea {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 1.4rem 0 1.4rem 2rem;
+  background: #225144;
+  border: solid 1px #408c71;
+  color: #f5f5f7;
+  outline: none;
+  resize: none;
+}
+.register-field textarea:-ms-input-placeholder {
+  color: #629693;
+}
+.register-field textarea::placeholder {
+  color: #629693;
+}
+.register-field input {
+  width: 100%;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 1.4rem 0 1.4rem 2rem;
+  background: #225144;
+  border: solid 1px #408c71;
+  color: #f5f5f7;
+  outline: none;
+}
+.register-field input:-ms-input-placeholder {
+  color: #629693;
+}
+.register-field input::placeholder {
+  color: #629693;
+}
+.register-field input#memo {
+  border: solid 1px tomato;
+}
+.register-field input::-webkit-inner-spin-button {
+  display: none;
+}
+.register-field .register-num {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.register-field .register-num input::-webkit-inner-spin-button {
+  display: none;
+}
+.register-field .register-num p {
+  color: #f5f5f7;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+.register-field .register-num #age-field {
+  width: 20%;
 }
 
 .main-bg {
@@ -670,77 +742,6 @@ html {
   gap: 1rem;
   overflow-x: scroll;
 }
-.main-bg .new-regist .register-form .register-field {
-  width: 80%;
-}
-.main-bg .new-regist .register-form .register-field h2 {
-  font-size: 1.4rem;
-  color: #f5f5f7;
-  padding: 0.6rem 0 0.8rem 0;
-  font-weight: 400;
-}
-.main-bg .new-regist .register-form .register-field p {
-  font-size: 1.2rem;
-  color: #f5f5f7;
-  font-weight: 400;
-  padding-bottom: 1rem;
-}
-.main-bg .new-regist .register-form .register-field textarea {
-  width: 100%;
-  margin-top: 1rem;
-  font-size: 1.4rem;
-  border-radius: 1rem;
-  padding: 1.4rem 0 1.4rem 2rem;
-  background: #225144;
-  border: solid 1px #408c71;
-  color: #f5f5f7;
-  outline: none;
-  resize: none;
-}
-.main-bg .new-regist .register-form .register-field textarea:-ms-input-placeholder {
-  color: #629693;
-}
-.main-bg .new-regist .register-form .register-field textarea::placeholder {
-  color: #629693;
-}
-.main-bg .new-regist .register-form .register-field input {
-  width: 100%;
-  font-size: 1.4rem;
-  border-radius: 1rem;
-  padding: 1.4rem 0 1.4rem 2rem;
-  background: #225144;
-  border: solid 1px #408c71;
-  color: #f5f5f7;
-  outline: none;
-}
-.main-bg .new-regist .register-form .register-field input:-ms-input-placeholder {
-  color: #629693;
-}
-.main-bg .new-regist .register-form .register-field input::placeholder {
-  color: #629693;
-}
-.main-bg .new-regist .register-form .register-field input#memo {
-  border: solid 1px tomato;
-}
-.main-bg .new-regist .register-form .register-field input::-webkit-inner-spin-button {
-  display: none;
-}
-.main-bg .new-regist .register-form .register-field .register-num {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.main-bg .new-regist .register-form .register-field .register-num input::-webkit-inner-spin-button {
-  display: none;
-}
-.main-bg .new-regist .register-form .register-field .register-num p {
-  color: #f5f5f7;
-  font-size: 1.6rem;
-  padding: 1rem;
-}
-.main-bg .new-regist .register-form .register-field .register-num #age-field {
-  width: 20%;
-}
 .main-bg .new-regist .register-form .register-gender {
   display: flex;
   gap: 1.2rem;
@@ -757,14 +758,6 @@ html {
 .main-bg .new-regist .register-form .register-gender .selected {
   background: #fabc60;
   color: #2f6457;
-}
-.main-bg .new-regist .register-form .register-btn {
-  margin-top: 2.2rem;
-  width: 9rem;
-  height: 4rem;
-}
-.main-bg .new-regist .register-form .register-btn button {
-  line-height: 4rem;
 }
 .main-bg .new-regist .register-form .register-time {
   display: flex;
@@ -952,7 +945,7 @@ html {
 .main-bg .new-regist .register-form .password-wrapper button {
   position: absolute;
   right: 5rem;
-  color: #fabc60;
+  color: #408c71;
   font-size: 1.6rem;
 }
 .main-bg .subscription-wrapper h1,
@@ -1002,12 +995,41 @@ html {
   gap: 1rem;
   overflow-x: scroll;
 }
+.main-bg .subsc-form .ccpass {
+  display: flex;
+  gap: 2rem;
+}
+.main-bg .subsc-form .rules {
+  width: 80%;
+  height: 50%;
+  overflow: scroll;
+}
+.main-bg .subsc-form .rules h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #f5f5f7;
+}
+.main-bg .subsc-form .rules p {
+  letter-spacing: 0.05rem;
+  color: #f5f5f7;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+.main-bg .register-btn {
+  margin-top: 2.2rem;
+  width: 9rem;
+  height: 4rem;
+}
+.main-bg .register-btn button,
+.main-bg .register-btn a {
+  line-height: 4rem;
+}
 
 .login-page {
   position: relative;
 }
 .login-page .logo {
-  padding-top: 24rem;
+  padding-top: 20rem;
   width: 18rem;
   height: 11.3471rem;
 }
