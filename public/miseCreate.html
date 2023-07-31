@@ -23,7 +23,7 @@
           </div>
           <div class="register-field">
             <h2>営業時間</h2>
-            <div class="register-time">
+            <div class="register-num register-time">
               <select name="hour" id="hour-select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
                 <option value="0">00</option>
                 <option value="1">01</option>
@@ -182,21 +182,21 @@
                 <div class="seat-content">
                   <h2>テーブル</h2>
                   <div class="seat-inner">
-                    <input type="number" id="age-field" min="0">
+                    <input type="number" id="seat-num" min="0">
                     <p>卓</p>
                   </div>
                 </div>
                 <div class="seat-content">
                   <h2>カウンター</h2>
                   <div class="seat-inner">
-                    <input type="number" id="age-field" min="0">
+                    <input type="number" id="seat-num" min="0">
                     <p>席</p>
                   </div>
                 </div>
                 <div class="seat-content">
                   <h2>お座敷</h2>
                   <div class="seat-inner">
-                    <input type="number" id="age-field" min="0">
+                    <input type="number" id="seat-num" min="0">
                     <p>部屋</p>
                   </div>
                 </div>
@@ -217,6 +217,46 @@
               </ul>
             </div>
           </div>
+          <div class="register-field">
+            <h2>お店の写真</h2>
+            <p>
+               店の外装・内装・メニュー表・料理の4枚の写真をアップロード
+              してください
+              <div class="upload-container">
+                <div class="container" id="imgBox1">
+                  <input type="file" accept="image/*" name="image" id="file1" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file1"></label>
+                </div>
+                <div class="container" id="imgBox2">
+                  <input type="file" accept="image/*" name="image" id="file2" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file2"></label>
+                </div>
+                <div class="container" id="imgBox3">
+                  <input type="file" accept="image/*" name="image" id="file3" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file3"></label>
+                </div>
+                <div class="container" id="imgBox4">
+                  <input type="file" accept="image/*" name="image" id="file4" Style="display:none" onchange="loadFile(event)">
+                  <label class="fa-solid fa-plus" for="file4"></label>
+                </div>
+              </div>
+            </p>
+          </div>
+          <div class="register-field">
+            <h2>住所</h2>
+            <p>大阪府 大阪市 北区
+              <div class="register-location">
+                <div class="prefecture"></div>
+                <div class="street">
+                  <input type="number" id="seat-num" min="0">
+                  <p>丁目</p>
+                </div>
+                <div class="street-num">
+                  <input type="number" id="seat-num" min="0">
+                </div>
+              </div>
+            </p>
+          </div>
           <div class="register-btn"><a href="user_confirmation.html">確認</a></div>
         </div>
       </div>
@@ -224,6 +264,7 @@
     <script src="https://kit.fontawesome.com/f922c24c63.js" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
     <script src="js/change.js"> </script>
-    <script src="js/category.js"> </script>
+    <script src="js/category.js"></script>
+    <script src="js/upload.js"> </script>
   </body>
 </html>

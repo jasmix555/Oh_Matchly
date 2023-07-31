@@ -18,7 +18,7 @@ html(lang="ja")
               input(type="text" placeholder="例)イーシーシーコンピュータセンモンガッコウ")
             .register-field
               h2 営業時間
-              .register-time
+              .register-num.register-time
                 select(name="hour" id="hour-select" onfocus='this.size=6;' onblur='this.size=6;' onfocusout='this.size=null;' onchange='this.size=6; this.blur();')
                   - for (let i = 0; i <= 23; i++)
                     option(value=i class="selectedHour" === i ? 'selected' : '') #{String(i).padStart(2, '0')}
@@ -94,17 +94,17 @@ html(lang="ja")
                   .seat-content
                     h2 テーブル
                     .seat-inner
-                      input(type="number" id="age-field" min="0")
+                      input(type="number" id="seat-num" min="0")
                       p 卓
                   .seat-content
                     h2 カウンター
                     .seat-inner
-                      input(type="number" id="age-field" min="0")
+                      input(type="number" id="seat-num" min="0")
                       p 席
                   .seat-content
                     h2 お座敷
                     .seat-inner
-                      input(type="number" id="age-field" min="0")
+                      input(type="number" id="seat-num" min="0")
                       p 部屋
                 input(type="text" placeholder="お席のことで他になにかございましたらこちらにご記入ください。")
             .register-field
@@ -116,9 +116,36 @@ html(lang="ja")
                   li
                     button 喫煙可能
             .register-field
-              
+              h2 お店の写真
+              p 
+                |店の外装・内装・メニュー表・料理の4枚の写真をアップロード
+                |してください
+                .upload-container
+                  .container#imgBox1
+                    input(type="file" accept="image/*" name="image" id="file1" Style="display:none" onchange="loadFile(event)")
+                    label(for="file1").fa-solid.fa-plus
+                  .container#imgBox2
+                    input(type="file" accept="image/*" name="image" id="file2" Style="display:none" onchange="loadFile(event)")
+                    label(for="file2").fa-solid.fa-plus
+                  .container#imgBox3
+                    input(type="file" accept="image/*" name="image" id="file3" Style="display:none" onchange="loadFile(event)")
+                    label(for="file3").fa-solid.fa-plus
+                  .container#imgBox4
+                    input(type="file" accept="image/*" name="image" id="file4" Style="display:none" onchange="loadFile(event)")
+                    label(for="file4").fa-solid.fa-plus
+            .register-field
+              h2 住所
+              p 大阪府 大阪市 北区
+                .register-location
+                  .prefecture
+                  .street
+                    input(type="number" id="seat-num" min="0")
+                    p 丁目
+                  .street-num
+                    input(type="number" id="seat-num" min="0")
             .register-btn
               a(href="user_confirmation.html") 確認
       include _temp_p_foot
       script(src="js/change.js") 
-      script(src="js/category.js") 
+      script(src="js/category.js")
+      script(src="js/upload.js") 

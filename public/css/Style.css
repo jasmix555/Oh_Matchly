@@ -675,7 +675,12 @@ html {
 .main-bg .new-regist .register-form .register-field h2 {
   font-size: 1.4rem;
   color: #f5f5f7;
-  padding: 1rem 0;
+  padding: 1rem 0 0.4rem 0;
+  font-weight: 400;
+}
+.main-bg .new-regist .register-form .register-field p {
+  font-size: 1.4rem;
+  color: #f5f5f7;
   font-weight: 400;
 }
 .main-bg .new-regist .register-form .register-field input {
@@ -695,20 +700,20 @@ html {
 .main-bg .new-regist .register-form .register-field input::placeholder {
   color: #629693;
 }
-.main-bg .new-regist .register-form .register-field .register-age {
+.main-bg .new-regist .register-form .register-field .register-num {
   display: flex;
   align-items: center;
   position: relative;
 }
-.main-bg .new-regist .register-form .register-field .register-age input::-webkit-inner-spin-button {
+.main-bg .new-regist .register-form .register-field .register-num input::-webkit-inner-spin-button {
   display: none;
 }
-.main-bg .new-regist .register-form .register-field .register-age p {
+.main-bg .new-regist .register-form .register-field .register-num p {
   color: #f5f5f7;
   font-size: 1.6rem;
   padding: 1rem;
 }
-.main-bg .new-regist .register-form .register-field .register-age #age-field {
+.main-bg .new-regist .register-form .register-field .register-num #age-field {
   width: 20%;
 }
 .main-bg .new-regist .register-form .register-gender {
@@ -805,12 +810,46 @@ html {
   gap: 1rem;
 }
 .main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner input {
+  padding: 0;
   width: 65px;
   height: 40px;
+  text-align: center;
+}
+.main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner input::-webkit-inner-spin-button {
+  display: none;
 }
 .main-bg .new-regist .register-form .register-seat-wrapper .register-seat .seat-content .seat-inner p {
   font-size: 1.4rem;
   color: #f5f5f7;
+}
+.main-bg .new-regist .register-form .upload-container {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+.main-bg .new-regist .register-form .upload-container .container {
+  width: 144px;
+  height: 211px;
+  border-radius: 1rem;
+  background: #225144;
+  border: 1px solid #408c71;
+  background-size: cover;
+  background-position: center;
+}
+.main-bg .new-regist .register-form .upload-container .container .fa-plus {
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  color: #225144;
+  background: #fabc60;
+  cursor: pointer;
+  font-weight: 2000;
 }
 
 .login-page {
