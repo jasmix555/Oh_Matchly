@@ -665,13 +665,32 @@
 .popup {
   display: block;
   position: absolute;
-  bottom: 11.5rem;
-  right: 2rem;
+  bottom: 12rem;
+  right: 0.4rem;
   z-index: 1000;
   a {
-    animation: shake 1s cubic-bezier(0.2, 0.1, 0.2, 0.2) 2s both infinite;
+    position: relative;
+    right: 0;
+    border: solid 1px tomato;
+    animation: shake 1.2s cubic-bezier(0.32, 2, 0.55, 0.27) both infinite;
     transform: translate3d(0, 0, 0);
     display: block;
+  }
+
+  .popup_banner {
+    width: 10rem;
+    height: 5rem;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    color: index.$white;
+    font-size: 1rem;
+    .popup_text {
+      position: relative;
+    }
+    .popup_bg {
+      position: absolute;
+    }
   }
 }
 
