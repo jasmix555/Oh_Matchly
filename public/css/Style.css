@@ -1245,6 +1245,33 @@ html {
   border-radius: 1rem;
 }
 
+.popup {
+  display: block;
+  position: absolute;
+  bottom: 11.5rem;
+  right: 2rem;
+  z-index: 1000;
+}
+.popup a {
+  animation: shake 1s cubic-bezier(0.2, 0.1, 0.2, 0.2) 2s both infinite;
+  transform: translate3d(0, 0, 0);
+  display: block;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
 .showMenu {
   transform: translateY(0%);
 }
