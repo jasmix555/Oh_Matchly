@@ -1246,19 +1246,23 @@ html {
 }
 
 .popup {
-  display: block;
+  display: none;
   position: absolute;
-  bottom: 12rem;
-  right: 0.4rem;
+  bottom: 18rem;
+  right: 2rem;
   z-index: 1000;
 }
 .popup a {
+  width: 100%;
   position: relative;
   right: 0;
-  border: solid 1px tomato;
   animation: shake 1.2s cubic-bezier(0.32, 2, 0.55, 0.27) both infinite;
   transform: translate3d(0, 0, 0);
   display: block;
+}
+.popup a svg {
+  position: absolute;
+  right: 0;
 }
 .popup .popup_banner {
   width: 10rem;
@@ -1271,6 +1275,7 @@ html {
 }
 .popup .popup_banner .popup_text {
   position: relative;
+  padding: 0.3rem;
 }
 .popup .popup_banner .popup_bg {
   position: absolute;
