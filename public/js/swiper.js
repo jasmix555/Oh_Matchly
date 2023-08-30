@@ -1,25 +1,60 @@
 {
-  //counter function
+  // //counter function
+  // const counterElement = document.querySelector(".counter");
+  // const yayButton = document.querySelector("#love");
+
+  // // Set the initial counter value
+  // let counter = 0;
+
+  // // Function to handle the button click
+  // function increaseCounter() {
+  //   if (counter < 10) {
+  //     counter++;
+  //   } else {
+  //     counter = 0;
+  //   }
+
+  //   // Update the counter element's text
+  //   counterElement.textContent = counter;
+  // }
+
+  // // Add a click event listener to the "but-yay" button
+  // yayButton.addEventListener("click", increaseCounter);
+
+  ("use strict");
+
+  // Existing code for the counter
   const counterElement = document.querySelector(".counter");
   const yayButton = document.querySelector("#love");
 
-  // Set the initial counter value
   let counter = 0;
 
-  // Function to handle the button click
   function increaseCounter() {
     if (counter < 10) {
       counter++;
     } else {
       counter = 0;
     }
-
-    // Update the counter element's text
     counterElement.textContent = counter;
+
+    // Update the popup display after counter increment
+    updatePopupDisplay();
   }
 
-  // Add a click event listener to the "but-yay" button
   yayButton.addEventListener("click", increaseCounter);
+
+  // New code for the popup display
+  const popupElement = document.querySelector(".popup");
+
+  function updatePopupDisplay() {
+    if (counter >= 3) {
+      popupElement.style.display = "block";
+    } else {
+      popupElement.style.display = "none";
+    }
+  }
+
+  updatePopupDisplay(); // Set the initial display state
 }
 
 {
