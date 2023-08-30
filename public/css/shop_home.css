@@ -526,25 +526,144 @@ html {
   width: 20%;
 }
 
-.slideWrap {
+body {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  border: 1px solid #fff;
 }
-.slideWrap.show {
-  transition: ease-in-out 1s;
-  opacity: 1;
+
+.postWrap {
+  width: 355px;
+  height: 520px;
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+  padding-top: 400px;
 }
-.slideWrap li {
+.postWrap h2 {
+  font-size: 2em;
+  color: #fff;
+}
+.postWrap p {
+  font-size: 1.6em;
+  color: #fff;
+}
+
+h3 {
+  margin: 14px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.realTimeWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.realTimeWrap .beer {
+  width: 46px;
+  height: 46px;
+  background-color: #2f6457;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.realTimeWrap .beer .L {
+  width: 24px;
+  height: 30px;
+}
+.realTimeWrap .beer .M {
+  width: 23px;
+  height: 21px;
+}
+.realTimeWrap .beer .S {
+  width: 23px;
+  height: 21px;
+}
+.realTimeWrap .beer .focusOff {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  border: 1px solid #629693;
+  background-color: rgba(0, 0, 0, 0.49);
+}
+.realTimeWrap .asirai {
+  width: 24px;
+  height: 4px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  width: 170px;
+  height: 60px;
+  border-radius: 10px;
+  background: var(--accent-color, #fabc60);
+  color: #2f6457;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.25);
+  font-size: 1.5em;
+}
+
+.book {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+}
+
+.modalBg {
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.62);
+  position: absolute;
+  top: 0;
   display: none;
 }
-.slideWrap li:first-child {
+
+.show {
   display: block;
 }
-.slideWrap li img {
-  width: 100%;
-  height: 100%;
+
+.modal {
+  width: 362px;
+  height: 274px;
+  position: absolute;
+  background-color: #242f30;
+  top: 25%;
+  left: 15px;
+  border-radius: 10px;
+  display: none;
+}
+.modal h3 {
+  border-radius: 10px 10px 0 0;
+  margin: 0 0 15px 0;
+  height: 40px;
+  background-color: #fabc60;
+  line-height: 35px;
+  color: #242f30;
+}
+.modal p {
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+  font-size: 1.6em;
+}
+.modal em {
+  color: #fabc60;
+  font-style: normal;
+}
+.modal .time {
+  font-size: 4em;
+  color: #fabc60;
+}
+.modal button {
+  width: 280px;
+  height: 42px;
+  background-color: #2f6457;
+  color: #fff;
+}
+
+.show {
+  display: block;
 }

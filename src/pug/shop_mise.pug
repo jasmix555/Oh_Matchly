@@ -1,0 +1,45 @@
+doctype html
+html(lang="ja")
+    head
+      include _temp_p_head
+      title Home Page
+      link(rel="stylesheet", href="css/Style.css")
+      link(rel="stylesheet", href="css/shop_home.css")
+
+    body
+      include _Navbar_home
+      .postWrap(style="background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);")
+        h2 鳥貴族
+        p 17:00~翌3:00
+
+      h3 現在の混雑状況
+      .realTimeWrap
+        .beer
+          img.L(src="img/miki/beer_L.png", alt="満席")
+          .focusOff
+        img.asirai(src="img/miki/asirai_beer.png", alt="あしらい")
+        .beer
+          img.M(src="img/miki/beer_M.png", alt="ややいっぱい")
+          .focusOff
+
+        img.asirai(src="img/miki/asirai_beer.png", alt="あしらい")
+        .beer
+          img.S(src="img/miki/beer_S.png", alt="空席あり")
+          .focusOff
+
+
+      button 投稿
+
+      .book
+      .modalBg
+      .modal
+        h3 ご予約様
+        p <em>4</em> 名様でご予約された
+        p <em>あっくん</em>  様
+        p.time 24:00
+        p 頃に到着予定
+        button.arrivedBtn 確認
+
+      include _temp_p_foot
+      script(src="js/shop_home.js") 
+
