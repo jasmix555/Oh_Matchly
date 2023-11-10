@@ -4,6 +4,7 @@
 
 //特徴や一人だけで実行するコードはここで書く
 .main-bg {
+  overflow: hidden;
   height: 100vh;
   width: 100vw;
   background-image: url(../../public/img/ワイヤー/bg.png);
