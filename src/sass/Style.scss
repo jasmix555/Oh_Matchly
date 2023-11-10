@@ -7,11 +7,11 @@
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/ワイヤー/bg.png);
+  background-image: url(./img/ワイヤー/bg.png);
   background-position: center;
   background-size: cover;
   .city {
-    background-image: url(../img/ワイヤー/city.png);
+    background-image: url(./img/ワイヤー/city.png);
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -857,7 +857,7 @@
           width: 100%;
           height: 100%;
           padding: 20px;
-          background-image: url(../img/icon/ion_beer-sharp.svg);
+          background-image: url(./img/icon/ion_beer-sharp.svg);
           background-size: contain;
         }
       }
